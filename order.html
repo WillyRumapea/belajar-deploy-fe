@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Rice Bowl!</title>
+    <link rel="stylesheet" href="./style/order-style.css" />
+    <script
+      type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="Mid-client-rMRmHnugvJbnDaYY"
+    ></script>
+  </head>
+  <body>
+    <h1 class="">Form Pemesanan</h1>
+    <div class="">
+      <div id="data-order">
+        <form action="" id="form-order">
+          <div>
+            <input
+              type="text"
+              id=""
+              placeholder="first name"
+              name="first_name"
+            />
+          </div>
+          <div>
+            <button id="button-add-order">+</button>
+          </div>
+          <div id="ordered-list"></div>
+          <div>
+            <input
+              type="number"
+              id="amount-price"
+              placeholder="bill"
+              name="gross_amount"
+              readonly
+            />
+          </div>
+          <div id="button-container">
+            <button class="">cash</button>
+            <button class="" id="cashless-button">cashless</button>
+          </div>
+        </form>
+      </div>
+      <div id="list-menu" class="">
+        <h1>daftar makanan</h1>
+        <div class="" id="list-card-menu"></div>
+      </div>
+    </div>
+    <script type="module" src="./js/order.js"></script>
+    <script src="./js/transaction.js"></script>
+  </body>
+</html>
