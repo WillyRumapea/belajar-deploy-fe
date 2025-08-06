@@ -5,17 +5,20 @@ cashlessButton.addEventListener("click", async (e) => {
   e.preventDefault();
 
   try {
-    const reqToken = await fetch("http://localhost:3000/api/token", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        order_id: "ORDER" + Date.now(),
-        gross_amount: parseInt(formOrder.gross_amount.value),
-        first_name: formOrder.first_name.value,
-      }),
-    });
+    const reqToken = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/api/token",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          order_id: "ORDER" + Date.now(),
+          gross_amount: parseInt(formOrder.gross_amount.value),
+          first_name: formOrder.first_name.value,
+        }),
+      }
+    );
 
     const response = await reqToken.json();
     console.log(response);
