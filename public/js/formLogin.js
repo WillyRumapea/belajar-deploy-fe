@@ -5,8 +5,8 @@ buttonLogin.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
     const data = {
-      user: formLogin.username.value,
-      password: formLogin.password.value,
+      users_name: formLogin.username.value,
+      users_password: formLogin.password.value,
     };
     const response = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/login",
