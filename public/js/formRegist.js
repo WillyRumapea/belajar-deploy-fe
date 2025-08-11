@@ -22,7 +22,6 @@ buttonRegist.addEventListener("click", async (e) => {
 
     if (response.ok) {
       alert("berhasil regist! silahkan login");
-      console.log("Login Success!");
     } else {
       alert("username sudah pernah digunakan! silahkan ganti");
     }
