@@ -5,8 +5,8 @@ buttonRegist.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
     const data = {
-      user: formRegist.username.value,
-      password: formRegist.password.value,
+      users_name: formRegist.username.value,
+      users_password: formRegist.password.value,
     };
     const response = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/regist",
