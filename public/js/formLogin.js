@@ -23,7 +23,7 @@ buttonLogin.addEventListener("click", async (e) => {
     if (response.ok) {
       alert("berhasil login!");
       console.log("Login Success!");
-      window.location.href = "../index.html";
+      window.location.href = "../../index.html";
     } else {
       alert("username atau password salah!");
     }

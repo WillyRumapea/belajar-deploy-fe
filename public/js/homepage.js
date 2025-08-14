@@ -1,6 +1,7 @@
 const toOrder = document.getElementById("toOrderForm");
 
 toOrder.addEventListener("click", async (e) => {
+  e.preventDefault();
   const reqSession = await fetch(
     "https://belajar-deploy-api-production.up.railway.app/check-session",
     {
