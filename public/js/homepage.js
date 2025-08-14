@@ -13,9 +13,9 @@ toOrder.addEventListener("click", async (e) => {
 
   if (!data.loggedin) {
     alert("Silahkan login terlebih dahulu");
-    window.location.href = "./page/formLogin.html";
+    window.location.href = "./page/user/formLogin.html";
     return;
   }
 
-  window.location.href = "page/order.html";
+  window.location.href = "./page/user/order.html";
 });
