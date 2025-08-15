@@ -24,7 +24,7 @@ const fetchData = async () => {
             <td>
                 <div>
                     <button style="background-color: #ffed29">Update!</button>
-                    <button style="background-color: #ff1919>Delete</button>
+                    <button style="background-color: #ff1919">Delete!</button>
                 </div>
             </td>
         `;
