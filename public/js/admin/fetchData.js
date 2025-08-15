@@ -21,12 +21,12 @@ const fetchData = async () => {
             <td style="border: 1px solid black; padding: 8px;">${item.nama_makanan}</td>
             <td style="border: 1px solid black; padding: 8px;">${item.harga_makanan}</td>
             <td style="border: 1px solid black; padding: 8px;">${item.gambar_makanan}</td>
-            <div>
-                <td>
+            <td>
+                <div>
                     <button style="background-color: #ffed29">Update!</button>
                     <button style="background-color: #ff1919>Delete</button>
-                </td>
-            </div>
+                </div>
+            </td>
         `;
       tbody.appendChild(row);
     });
