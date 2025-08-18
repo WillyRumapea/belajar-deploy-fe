@@ -21,9 +21,18 @@ buttonLogin.addEventListener("click", async (e) => {
     );
 
     if (response.ok) {
-      alert("berhasil login!");
-      console.log("Login Success!");
-      window.location.href = "../../index.html";
+      const result = await response.json();
+      console.log(result);
+
+      if (result.user.role === "admin") {
+        alert("Wellcome back Admin!");
+        console.log("Login Success!");
+        window.location.href = "../admin/dashboard.html";
+      } else if (result.user.role === "user") {
+        alert("berhasil login");
+        console.log("Login Success!");
+        window.location.href = "../../index.html";
+      }
     } else {
       alert("username atau password salah!");
     }
