@@ -10,6 +10,7 @@ toOrder.addEventListener("click", async (e) => {
   );
 
   const data = await reqSession.json();
+  console.log(data);
 
   if (!data.loggedin) {
     alert("Silahkan login terlebih dahulu");
