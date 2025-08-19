@@ -8,8 +8,10 @@ const fetchDataProds = async () => {
   }
 
   const data = await reqDataProds.json();
+  console.log(data);
   const dataUsers = data.makanan;
   console.log(dataUsers);
+
   const tbody = document.getElementsByClassName("tbody")[0];
 
   tbody.innerHTML = "";
