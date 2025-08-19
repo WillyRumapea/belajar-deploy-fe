@@ -8,7 +8,7 @@ const fetchDataProds = async () => {
   }
 
   const dataJson = await reqDataProds.json();
-  console.log(data);
+  console.log(dataJson);
   const dataProducts = dataJson.data;
   console.log(dataUsers);
 
