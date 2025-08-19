@@ -10,7 +10,7 @@ const fetchDataProds = async () => {
   const dataJson = await reqDataProds.json();
   console.log(dataJson);
   const dataProducts = dataJson.data;
-  console.log(dataUsers);
+  console.log(dataProducts);
 
   const tbody = document.getElementsByClassName("tbody")[0];
 
