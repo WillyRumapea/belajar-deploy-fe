@@ -9,8 +9,8 @@ const dataUser = async () => {
       throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
     }
 
-    const data = await reqDataUsers.json();
-    const dataUsers = data.users;
+    const dataJsonUsers = await reqDataUsers.json();
+    const dataUsers = dataJsonUsers.data;
     const amountUsers = dataUsers.length;
     console.log("Total users:", amountUsers);
 
@@ -39,7 +39,8 @@ const dataProds = async () => {
       throw new Error(`HTTP error, Status: ${reqDataProds.status}`);
     }
 
-    const dataProds = await reqDataProds.json();
+    const dataJsonProds = await reqDataProds.json();
+    const dataProds = dataJsonProds.data;
     const amountProds = dataProds.length;
     console.log("Total products:", amountProds);
 
