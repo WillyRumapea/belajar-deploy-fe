@@ -9,7 +9,7 @@ const fetchDataProds = async () => {
 
   const data = await reqDataProds.json();
   console.log(data);
-  const dataUsers = data[0];
+  const dataUsers = await data.json();
   console.log(dataUsers);
 
   const tbody = document.getElementsByClassName("tbody")[0];
