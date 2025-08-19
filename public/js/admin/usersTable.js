@@ -7,8 +7,9 @@ const fetchDataUser = async () => {
     throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
   }
 
-  const dataJson = await reqDataUsers.json();
-  const dataUser = dataJson.data;
+  const dataJsonUsers = await reqDataUsers.json();
+  console.log(dataJsonUsers);
+  const dataUser = dataJsonUsers.data;
   console.log(dataUser);
 
   const tbody = document.getElementsByClassName("tbody")[0];
