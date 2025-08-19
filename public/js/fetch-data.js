@@ -3,8 +3,13 @@ export const getData = async () => {
     "https://belajar-deploy-api-production.up.railway.app/daftar-makanan";
   try {
     const request = await fetch(url);
-    const response = await request.json();
-    return response;
+
+    if (!request.ok) {
+      throw new Error(`HTTP error! Status: ${request.status}`);
+    }
+    const responseData = await request.json();
+    const dataMakanan = responseData.data;
+    return dataMakanan;
   } catch (err) {
     console.log("Error fetching data:", err);
   }
