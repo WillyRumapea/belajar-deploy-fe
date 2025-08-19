@@ -19,10 +19,10 @@ const fetchDataUser = async () => {
   dataUser.forEach((item) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-        <td style="border: 1px solid black; padding: 8px;">${item.id_users}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.user}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.password}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.role}</td>
+        <td style="border: 1px solid black; padding: 8px;">${item.users_id}</td>
+        <td style="border: 1px solid black; padding: 8px;">${item.users_name}</td>
+        <td style="border: 1px solid black; padding: 8px;">${item.users_password}</td>
+        <td style="border: 1px solid black; padding: 8px;">${item.users_role}</td>
         <td style="border: 1px solid black; padding: 8px;">
             <div>
                 <button>update</button>
