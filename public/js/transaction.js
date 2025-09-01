@@ -5,10 +5,8 @@ cashlessButton.addEventListener("click", async (e) => {
   e.preventDefault();
   if (!window.onRadius) {
     alert("Alamat di luar jangkauan, tidak dapat melanjutkan pembayaran");
-    cashlessButton.disabled = true;
     return;
   }
-  cashlessButton.disabled = false;
   try {
     const reqToken = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/api/token",

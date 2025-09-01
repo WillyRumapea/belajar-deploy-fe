@@ -270,6 +270,7 @@ buttonCheck.addEventListener("click", async (e) => {
       )} km. Pesanan segera diantar`
     );
     window.onRadius = true;
+    cashlessButton.disabled = false;
   } else {
     alert(
       `Lokasi berada dalam diluar jangkauan ${distance.toFixed(
@@ -278,6 +279,7 @@ buttonCheck.addEventListener("click", async (e) => {
       `
     );
     window.onRadius = false;
+    cashlessButton.disabled = true;
   }
 });
 
