@@ -23,7 +23,7 @@ const getDataFetch = async () => {
 
     nameProd.textContent = prod.nama_makanan;
     priceProd.textContent = prod.harga_makanan;
-    imgProd.setAttribute("src", `../image/${prod.gambar_makanan}`); // kalau local ganti jadi image/${prod.gambar_makanan} aja
+    imgProd.setAttribute("src", `../../image/${prod.gambar_makanan}`); // kalau local ganti jadi image/${prod.gambar_makanan} aja
     imgProd.style.width = "150px";
     imgProd.style.height = "100px";
     buttonAddProd.textContent = "tambahkan";
