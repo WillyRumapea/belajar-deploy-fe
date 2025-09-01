@@ -46,6 +46,7 @@ function initMap() {
 }
 
 buttonAddress.addEventListener("click", async (e) => {
+  e.preventDefault();
   const addressValue = inputAddress.value;
   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(
     addressValue
