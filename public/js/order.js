@@ -12,7 +12,7 @@ const amountPrice = document.getElementById("amount-price");
 const inputAddress = document.getElementById("address");
 const buttonAddress = document.getElementById("searchAddres");
 const buttonCheck = document.getElementById("checkDistance");
-const body = document.body;
+window.onRadius = false;
 amountPrice.value = 0;
 
 let map;
@@ -269,6 +269,7 @@ buttonCheck.addEventListener("click", async (e) => {
         2
       )} km. Pesanan segera diantar`
     );
+    window.onRadius = true;
   } else {
     alert(
       `Lokasi berada dalam diluar jangkauan ${distance.toFixed(
@@ -276,6 +277,7 @@ buttonCheck.addEventListener("click", async (e) => {
       )} km. silahkan masukkan alamat lain
       `
     );
+    window.onRadius = false;
   }
 });
 
