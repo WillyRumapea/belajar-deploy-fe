@@ -279,6 +279,8 @@ buttonCheck.addEventListener("click", async (e) => {
   }
 });
 
+window.initMap = initMap;
+
 let orders = [];
 
 const updatePrice = () => {
