@@ -8,6 +8,7 @@ cashlessButton.addEventListener("click", async (e) => {
     cashlessButton.disabled = true;
     return;
   }
+  cashlessButton.disabled = false;
   try {
     const reqToken = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/api/token",
