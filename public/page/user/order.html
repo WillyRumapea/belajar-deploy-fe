@@ -37,6 +37,12 @@
               readonly
             />
           </div>
+          <div id="address-map">
+            <div id="map"></div>
+            <input type="text" id="address" />
+            <button id="searchAddres">add</button>
+            <button id="checkDistance">cek jarak</button>
+          </div>
           <div id="button-container">
             <button class="">cash</button>
             <button class="" id="cashless-button">cashless</button>
@@ -49,6 +55,11 @@
       </div>
     </div>
     <script type="module" src="../../js/order.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnPptO7fINYen4Zu22BrqcLJzJ6uUKYbg&callback=initMap&libraries=maps"
+      defer
+    ></script>
+    <script src="../../js/hitung-jarak.js"></script>
     <script src="../../js/transaction.js"></script>
   </body>
 </html>
