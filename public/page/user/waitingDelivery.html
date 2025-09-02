@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penjemputan dan Pengantaran</title>
+  </head>
+  <body>
+    <h1>Terimakasih sudah memesan. Ditunggu pemesanan selanjutnya</h1>
+    <h3>Silahkan isi alamat pengantaran</h3>
+    <form action="">
+      <div id="address-map">
+        <div id="map"></div>
+        <input type="text" id="address" />
+        <button id="searchAddres">add</button>
+        <button id="checkDistance">cek jarak</button>
+      </div>
+    </form>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnPptO7fINYen4Zu22BrqcLJzJ6uUKYbg&callback=initMap&libraries=maps"
+      defer
+    ></script>
+    <script src="../../js/hitung-jarak.js"></script>
+  </body>
+</html>

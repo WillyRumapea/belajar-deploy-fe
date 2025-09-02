@@ -3,10 +3,6 @@ const cashlessButton = document.getElementById("cashless-button");
 
 cashlessButton.addEventListener("click", async (e) => {
   e.preventDefault();
-  if (!window.onRadius) {
-    alert("Alamat di luar jangkauan, tidak dapat melanjutkan pembayaran");
-    return;
-  }
   try {
     const reqToken = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/api/token",
@@ -32,6 +28,7 @@ cashlessButton.addEventListener("click", async (e) => {
           console.log("Payment success!");
           // redirect atau tampilkan notif sukses
           alert("payment sucess, thanks for order!");
+          window.location.href = "./waitingDeliver.html";
         },
         onPending: function (response) {
           console.log("Payment pending", response);
