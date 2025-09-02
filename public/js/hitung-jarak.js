@@ -161,6 +161,7 @@ buttonCheck.addEventListener("click", async (e) => {
   }
 });
 
+window.initMap();
 // buttonAddress.addEventListener("click", async (e) => {
 //   e.preventDefault();
 //   const addressValue = inputAddress.value;
