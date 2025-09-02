@@ -28,7 +28,7 @@ cashlessButton.addEventListener("click", async (e) => {
           console.log("Payment success!");
           // redirect atau tampilkan notif sukses
           alert("payment sucess, thanks for order!");
-          window.location.href = "./waitingDeliver.html";
+          window.location.href = "./waitingDelivery.html";
         },
         onPending: function (response) {
           console.log("Payment pending", response);
