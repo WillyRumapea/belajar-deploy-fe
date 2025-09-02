@@ -6,10 +6,24 @@ const tengkuCoordinates = {
 const inputAddress = document.getElementById("address");
 const buttonAddress = document.getElementById("searchAddres");
 const buttonCheck = document.getElementById("checkDistance");
+const formDelivery = document.getElementById("form-delivery");
+const buttonAntar = document.getElementById("antar");
+const buttonTidakAntar = document.getElementById("tidak-antar");
 const body = document.body;
 
 let map;
 let marker;
+
+buttonAntar.addEventListener("click", (e) => {
+  e.preventDefault();
+  formDelivery.style.display = "block";
+});
+
+buttonTidakAntar.addEventListener("click", (e) => {
+  e.preventDefault();
+  formDelivery.style.display = "none";
+  alert("Silahkan jemput ke alamat tertera");
+});
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
