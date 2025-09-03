@@ -54,6 +54,8 @@ buttonCash.addEventListener("click", async (e) => {
       alert("Terimakasih sudah memesan, silahkan tunggu!");
       window.location.href = "./waitingDelivery.html";
     } else {
+      const errMsg = await reqOrder.json().catch(() => ({}));
+      console.error("Error dari server:", errMsg);
       alert("Maaf pesanan anda gagal di proses!");
     }
   } catch (err) {
