@@ -44,6 +44,7 @@ const getDataFetch = async () => {
         } else {
           const detailNameProd = document.createElement("input");
           detailNameProd.setAttribute("name", "orders_menu");
+          detailNameProd.type = "text";
           const detailPriceProd = document.createElement("p");
           const orderedMenu = document.createElement("div");
           const qtyWrapper = document.createElement("div");
