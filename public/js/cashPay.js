@@ -6,6 +6,8 @@ const inputDetailProdName = document.querySelectorAll(
 const inputDetailProdAmount = document.querySelectorAll(
   "input[name='orders_amount']"
 );
+console.log(inputDetailProdName);
+console.log(inputDetailProdAmount);
 
 buttonCash.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -17,6 +19,8 @@ buttonCash.addEventListener("click", async (e) => {
       const amountInput = inputDetailProdAmount[index];
       const menuName = menuInput.value;
       const amount = parseInt(amountInput.value);
+
+      console.log("Menu:", menuName, "Amount:", amount);
 
       if (menuName && amount > 0) {
         menuList.push(menuName);
