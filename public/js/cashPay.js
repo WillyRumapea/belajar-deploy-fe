@@ -6,10 +6,10 @@ buttonCash.addEventListener("click", async (e) => {
   try {
     const dataOrder = {
       orders_id: "ORDER" + Date.now() + Math.floor(Math.random() * 1000),
-      orders_customer: formOrderCash.first_name,
-      orders_menu: parseInt(formOrderCash.orders_menu),
-      orders_amount: parseInt(formOrderCash.orders_amount),
-      orders_total_price: parseInt(formOrderCash.gross_amount),
+      orders_customer: formOrderCash.first_name.value,
+      orders_menu: parseInt(formOrderCash.orders_menu.value),
+      orders_amount: parseInt(formOrderCash.orders_amount.value),
+      orders_total_price: parseInt(formOrderCash.gross_amount.value),
     };
     console.log(dataOrder);
     const reqOrder = await fetch(
