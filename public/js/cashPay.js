@@ -1,17 +1,18 @@
 const formOrderCash = document.getElementById("form-order");
 const buttonCash = document.getElementById("cash-button");
-const inputDetailProdName = document.querySelectorAll(
-  "input[name='orders_menu']"
-);
-const inputDetailProdAmount = document.querySelectorAll(
-  "input[name='orders_amount']"
-);
-console.log(inputDetailProdName);
-console.log(inputDetailProdAmount);
 
 buttonCash.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
+    const inputDetailProdName = document.querySelectorAll(
+      "input[name='orders_menu']"
+    );
+    const inputDetailProdAmount = document.querySelectorAll(
+      "input[name='orders_amount']"
+    );
+    console.log(inputDetailProdName);
+    console.log(inputDetailProdAmount);
+
     let menuList = [];
     let totalAmount = 0;
 
