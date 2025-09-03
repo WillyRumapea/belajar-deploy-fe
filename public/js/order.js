@@ -42,13 +42,15 @@ const getDataFetch = async () => {
         if (existingMenu) {
           return;
         } else {
-          const detailNameProd = document.createElement("p");
+          const detailNameProd = document.createElement("input");
+          detailNameProd.setAttribute("name", "orders_menu");
           const detailPriceProd = document.createElement("p");
           const orderedMenu = document.createElement("div");
           const qtyWrapper = document.createElement("div");
           const btnMin = document.createElement("button");
           const inputQty = document.createElement("input");
           inputQty.setAttribute("type", "number");
+          inputQty.setAttribute("name", "orders_amount");
           inputQty.min = 1;
           inputQty.value = 1;
           const btnPls = document.createElement("button");
