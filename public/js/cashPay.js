@@ -47,7 +47,7 @@ buttonCash.addEventListener("click", async (e) => {
         body: JSON.stringify(dataOrder),
       }
     );
-
+    console.log(reqOrder);
     if (reqOrder.ok) {
       const result = await reqOrder.json();
       console.log(result);
