@@ -55,7 +55,7 @@ const getDataFetch = async () => {
           inputQty.value = 1;
           const btnPls = document.createElement("button");
 
-          detailNameProd.textContent = selectedMenu.nama_makanan;
+          detailNameProd.value = selectedMenu.nama_makanan;
           detailPriceProd.textContent = selectedMenu.harga_makanan;
           btnMin.textContent = "-";
           btnPls.textContent = "+";
