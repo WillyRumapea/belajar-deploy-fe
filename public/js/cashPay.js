@@ -1,14 +1,34 @@
 const formOrderCash = document.getElementById("form-order");
 const buttonCash = document.getElementById("cash-button");
+const inputDetailProdName = document.querySelectorAll(
+  "input[name='orders_menu']"
+);
+const inputDetailProdAmount = document.querySelectorAll(
+  "input[name='orders_amount']"
+);
 
 buttonCash.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
+    let menuList = [];
+    let totalAmount = 0;
+
+    inputDetailProdName.forEach((menuInput, index) => {
+      const amountInput = inputDetailProdAmount[index];
+      const menuName = menuInput.value;
+      const amount = parseInt(amountInput.value);
+
+      if (menuName && amount > 0) {
+        menuList.push(menuName);
+        totalAmount += amount;
+      }
+    });
+
     const dataOrder = {
       orders_id: "ORDER" + Date.now() + Math.floor(Math.random() * 1000),
       orders_customer: formOrderCash.first_name.value,
-      orders_menu: parseInt(formOrderCash.orders_menu.value),
-      orders_amount: parseInt(formOrderCash.orders_amount.value),
+      orders_menu: menuList.join(","),
+      orders_amount: totalAmount,
       orders_total_price: parseInt(formOrderCash.gross_amount.value),
     };
     console.log(dataOrder);
