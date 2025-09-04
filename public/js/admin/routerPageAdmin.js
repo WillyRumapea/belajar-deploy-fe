@@ -1,14 +1,14 @@
 const routes = {
   users: {
-    template: "../../pages/admin/users.html",
+    template: "../../pages/admin/usersTable.html",
     script: "../../js/admin/usersTable.js",
   },
   products: {
-    template: "../../pages/admin/products.html",
+    template: "../../pages/admin/prodsTable.html",
     script: "../../js/admin/prodsTable.js",
   },
   orders: {
-    template: "../../pages/admin/orders.html",
+    template: "../../pages/admin/ordersTable.html",
     script: "../../js/admin/ordersTable.js",
   },
 };
