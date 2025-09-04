@@ -1,18 +1,18 @@
 const routes = {
   dashboard: {
-    template: "./dashboard.html",
-    script: "../../js/admin/getBriefData.js",
+    template: "../../pages/admin/dashboard.html",
+    script: "../../js/admin/dashboard.js",
   },
   users: {
-    template: "../../pages/admin/usersTable.html",
+    template: "../../pages/admin/users.html",
     script: "../../js/admin/usersTable.js",
   },
   products: {
-    template: "../../pages/admin/prodsTable.html",
-    script: "../../js/admin/productsTable.js",
+    template: "../../pages/admin/products.html",
+    script: "../../js/admin/prodsTable.js",
   },
   orders: {
-    template: "../../pages/admin/ordersTable.html",
+    template: "../../pages/admin/orders.html",
     script: "../../js/admin/ordersTable.js",
   },
 };
