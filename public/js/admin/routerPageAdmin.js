@@ -1,18 +1,14 @@
 const routes = {
-  dashboard: {
-    template: "../../pages/admin/dashboard.html",
-    script: "../../js/admin/dashboard.js",
-  },
   users: {
-    template: "../../pages/admin/users.html",
+    template: "../../pages/admin/usersTable.html",
     script: "../../js/admin/usersTable.js",
   },
   products: {
-    template: "../../pages/admin/products.html",
-    script: "../../js/admin/prodsTable.js",
+    template: "../../pages/admin/prodsTable.html",
+    script: "../../js/admin/productsTable.js",
   },
   orders: {
-    template: "../../pages/admin/orders.html",
+    template: "../../pages/admin/ordersTable.html",
     script: "../../js/admin/ordersTable.js",
   },
 };
@@ -22,7 +18,6 @@ async function loadPage(page) {
   if (!route) return;
 
   try {
-    // Load halaman HTML
     const response = await fetch(route.template);
     if (!response.ok) throw new Error("Gagal memuat halaman");
     const html = await response.text();
