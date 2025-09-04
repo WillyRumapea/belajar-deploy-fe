@@ -1,5 +1,5 @@
 const briefInfo = document.querySelector(".brief-info");
-const dataUser = async () => {
+async function fetchBriefUsers() {
   try {
     const reqDataUsers = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/daftar-users"
@@ -12,37 +12,35 @@ const dataUser = async () => {
     const dataJsonUsers = await reqDataUsers.json();
     const dataUsers = dataJsonUsers.data;
     const amountUsers = dataUsers.length;
-    console.log("Total users:", amountUsers);
 
     const info = document.createElement("div");
     const infoTitle = document.createElement("h3");
     const infoText = document.createElement("p");
 
-    infoTitle.textContent = "User";
+    infoTitle.textContent = "Users";
     infoText.textContent = amountUsers;
 
-    info.appendChild(infoText);
     info.appendChild(infoTitle);
+    info.appendChild(infoText);
     briefInfo.appendChild(info);
   } catch (err) {
-    console.log("Error fetch data", err);
+    console.error("Error fetch data users:", err);
   }
-};
+}
 
-const dataProds = async () => {
+async function fetchBriefProds() {
   try {
     const reqDataProds = await fetch(
       "https://belajar-deploy-api-production.up.railway.app/daftar-makanan"
     );
 
     if (!reqDataProds.ok) {
-      throw new Error(`HTTP error, Status: ${reqDataProds.status}`);
+      throw new Error(`HTTP error! Status: ${reqDataProds.status}`);
     }
 
     const dataJsonProds = await reqDataProds.json();
     const dataProds = dataJsonProds.data;
     const amountProds = dataProds.length;
-    console.log("Total products:", amountProds);
 
     const info = document.createElement("div");
     const infoTitle = document.createElement("h3");
@@ -51,15 +49,15 @@ const dataProds = async () => {
     infoTitle.textContent = "Products";
     infoText.textContent = amountProds;
 
-    info.appendChild(infoText);
     info.appendChild(infoTitle);
+    info.appendChild(infoText);
     briefInfo.appendChild(info);
   } catch (err) {
-    console.log("Error fetch data products", er);
+    console.error("Error fetch data products:", err);
   }
-};
+}
 
 briefInfo.innerHTML = "";
 
-dataUser();
-dataProds();
+fetchBriefUsers();
+fetchBriefProds();

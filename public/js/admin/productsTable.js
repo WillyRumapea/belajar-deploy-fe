@@ -1,22 +1,23 @@
-const fetchDataProds = async () => {
-  const reqDataProds = await fetch(
-    "https://belajar-deploy-api-production.up.railway.app/daftar-makanan"
-  );
+async function fetchProdsData() {
+  try {
+    const reqDataProds = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/daftar-makanan"
+    );
 
-  if (!reqDataProds.ok) {
-    throw new Error(`HTTP error! Status: ${reqDataProds.status}`);
-  }
+    if (!reqDataProds.ok) {
+      throw new Error(`HTTP error! Status: ${reqDataProds.status}`);
+    }
 
-  const dataJson = await reqDataProds.json();
-  const dataProducts = dataJson.data;
+    const dataJson = await reqDataProds.json();
+    const dataProducts = dataJson.data;
 
-  const tbody = document.getElementsByClassName("tbody")[0];
+    const tbody = document.getElementsByClassName("tbody")[0];
 
-  tbody.innerHTML = "";
+    tbody.innerHTML = "";
 
-  dataProducts.forEach((item) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
+    dataProducts.forEach((item) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
         <td style="border: 1px solid black; padding: 8px;">${item.id_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.nama_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.harga_makanan}</td>
@@ -27,8 +28,11 @@ const fetchDataProds = async () => {
             </div>
         </td>
     `;
-    tbody.appendChild(row);
-  });
-};
+      tbody.appendChild(row);
+    });
+  } catch (err) {
+    console.log("Error fetching data", err);
+  }
+}
 
-fetchDataProds();
+fetchProdsData();

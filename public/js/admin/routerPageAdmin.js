@@ -3,45 +3,34 @@ const infoBrief = document.querySelector(".brief-info");
 async function loadPage(page) {
   if (page === "dashboard") {
     return;
-  } else if (page === "users") {
-    try {
-      const res = await fetch("./usersTable.html");
-      const html = await res.text();
+  }
 
-      infoBrief.innerHTML = html;
+  let fileHtml = "";
+  let scriptSrc = "";
 
-      const script = document.createElement("script");
-      script.setAttribute("src", "../../js/admin/usersTable.js");
-      document.body.appendChild(script);
-    } catch (err) {
-      infoBrief.innerHTML = `<p style="color:red;">Error load users: ${err.message}</p>`;
-    }
+  if (page === "users") {
+    fileHtml = "./usersTable.html";
+    scriptSrc = "../../js/admin/usersTable.js";
   } else if (page === "products") {
-    try {
-      const res = await fetch("./prodsTable.html");
-      const html = await res.text();
-
-      infoBrief.innerHTML = html;
-
-      const script = document.createElement("script");
-      script.setAttribute("src", "../../js/admin/productsTable.js");
-      document.body.appendChild(script);
-    } catch (err) {
-      infoBrief.innerHTML = `<p style="color:red;">Error load products: ${err.message}</p>`;
-    }
+    fileHtml = "./prodsTable.html";
+    scriptSrc = "../../js/admin/productsTable.js";
   } else if (page === "orders") {
-    try {
-      const res = await fetch("./ordersTable.html");
-      const html = await res.text();
+    fileHtml = "./ordersTable.html";
+    scriptSrc = "../../js/admin/ordersTable.js";
+  }
 
-      infoBrief.innerHTML = html;
+  try {
+    const res = await fetch(fileHtml);
+    const html = await res.text();
+    infoBrief.innerHTML = html;
 
+    if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
       const script = document.createElement("script");
-      script.setAttribute("src", "../../js/admin/ordersTable.js");
+      script.src = scriptSrc;
       document.body.appendChild(script);
-    } catch (err) {
-      infoBrief.innerHTML = `<p style="color:red;">Error load products: ${err.message}</p>`;
     }
+  } catch (err) {
+    infoBrief.innerHTML = `<p style="color:red;">Error load ${page}: ${err.message}</p>`;
   }
 }
 

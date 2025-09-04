@@ -1,37 +1,40 @@
-const fetchDataUser = async () => {
-  const reqDataUsers = await fetch(
-    "https://belajar-deploy-api-production.up.railway.app/daftar-users"
-  );
+async function fetchUserData() {
+  try {
+    const reqDataUsers = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/daftar-users"
+    );
 
-  if (!reqDataUsers.ok) {
-    throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
+    if (!reqDataUsers.ok) {
+      throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
+    }
+    const dataJsonUsers = await reqDataUsers.json();
+    console.log(dataJsonUsers);
+    const dataUser = dataJsonUsers.data;
+    console.log(dataUser);
+
+    const tbody = document.getElementsByClassName("tbody")[0];
+
+    tbody.innerHTML = "";
+
+    dataUser.forEach((item) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+          <td style="border: 1px solid black; padding: 8px;">${item.users_id}</td>
+          <td style="border: 1px solid black; padding: 8px;">${item.users_name}</td>
+          <td style="border: 1px solid black; padding: 8px;">${item.users_password}</td>
+          <td style="border: 1px solid black; padding: 8px;">${item.users_role}</td>
+          <td style="border: 1px solid black; padding: 8px;">
+              <div>
+                  <button>update</button>
+                  <button>hapus</button>
+              </div>
+          </td>
+      `;
+      tbody.appendChild(row);
+    });
+  } catch (err) {
+    console.log("Error fetching data", err);
   }
+}
 
-  const dataJsonUsers = await reqDataUsers.json();
-  console.log(dataJsonUsers);
-  const dataUser = dataJsonUsers.data;
-  console.log(dataUser);
-
-  const tbody = document.getElementsByClassName("tbody")[0];
-
-  tbody.innerHTML = "";
-
-  dataUser.forEach((item) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-        <td style="border: 1px solid black; padding: 8px;">${item.users_id}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.users_name}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.users_password}</td>
-        <td style="border: 1px solid black; padding: 8px;">${item.users_role}</td>
-        <td style="border: 1px solid black; padding: 8px;">
-            <div>
-                <button>update</button>
-                <button>hapus</button>
-            </div>
-        </td>
-    `;
-    tbody.appendChild(row);
-  });
-};
-
-fetchDataUser();
+fetchUserData();

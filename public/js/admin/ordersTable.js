@@ -1,22 +1,23 @@
-const fetchDataOrders = async () => {
-  const reqDataOrders = await fetch(
-    "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan"
-  );
+async function fetchOrdersData() {
+  try {
+    const reqDataOrders = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan"
+    );
 
-  if (!reqDataOrders.ok) {
-    throw new Error(`HTTP error! Status: ${reqDataOrders.status}`);
-  }
+    if (!reqDataOrders.ok) {
+      throw new Error(`HTTP error! Status: ${reqDataOrders.status}`);
+    }
 
-  const dataJson = await reqDataOrders.json();
-  const dataOrders = dataJson.data;
+    const dataJson = await reqDataOrders.json();
+    const dataOrders = dataJson.data;
 
-  const tbody = document.getElementsByClassName("tbody")[0];
+    const tbody = document.getElementsByClassName("tbody")[0];
 
-  tbody.innerHTML = "";
+    tbody.innerHTML = "";
 
-  dataOrders.forEach((item) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
+    dataOrders.forEach((item) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
         <td style="border: 1px solid black; padding: 8px;">${item.orders_id}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.orders_customer}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.orders_menu}</td>
@@ -30,8 +31,11 @@ const fetchDataOrders = async () => {
             </div>
         </td>
     `;
-    tbody.appendChild(row);
-  });
-};
+      tbody.appendChild(row);
+    });
+  } catch (err) {
+    console.log("Error fetching data", err);
+  }
+}
 
-fetchDataOrders();
+fetchOrdersData();
