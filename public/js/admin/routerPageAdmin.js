@@ -23,9 +23,21 @@ async function loadPage(page) {
       <h2>Dashboard</h2>
       <div class="brief-info"></div>
     `;
-    if (typeof initDashboard === "function") {
-      initDashboard();
-    }
+
+    const oldScript = document.querySelector(
+      `script[src="../../js/admin/getBriefData.js"]`
+    );
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.src = "../../js/admin/getBriefData.js";
+    script.onload = () => {
+      if (typeof initDashboard === "function") {
+        initDashboard();
+      }
+    };
+    document.body.appendChild(script);
+
     return;
   }
 
