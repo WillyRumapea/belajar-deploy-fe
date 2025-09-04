@@ -15,13 +15,12 @@ const routes = {
 
 async function loadPage(page) {
   if (page === "dashboard") {
-    try {
-      const response = await fetch("../../pages/admin/dashboard.html");
-      if (!response.ok) throw new Error("Gagal memuat dashboard");
-      const html = await response.text();
-      document.getElementById("content").innerHTML = html;
-    } catch (error) {
-      console.error("Error loading dashboard:", error);
+    document.getElementById("content").innerHTML = `
+    <h2>Dashboard</h2>
+    <div class="brief-info"></div>
+  `;
+    if (typeof initDashboard === "function") {
+      initDashboard();
     }
     return;
   }
