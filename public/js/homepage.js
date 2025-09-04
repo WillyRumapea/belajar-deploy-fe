@@ -1,4 +1,5 @@
 const toOrder = document.getElementById("toOrderForm");
+const buttonLogout = document.getElementById("logoutAccount");
 
 toOrder.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -19,4 +20,29 @@ toOrder.addEventListener("click", async (e) => {
   }
 
   window.location.href = "./page/user/order.html";
+});
+
+buttonLogout.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  try {
+    const destroySession = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/logout",
+      {
+        method: "POST",
+        credentials: "include",
+      }
+    );
+
+    const result = await destroySession.json();
+
+    if (result.succes) {
+      alert("logout berhasil");
+    } else {
+      alert("logout gagal" + result.message);
+    }
+  } catch (err) {
+    console.log(err);
+    alert("tejadi kesalahan saat logout");
+  }
 });
