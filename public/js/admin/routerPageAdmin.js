@@ -1,4 +1,8 @@
 const routes = {
+  dashboard: {
+    template: "./dashboard.html",
+    script: "../../js/admin/getBriefData.js",
+  },
   users: {
     template: "../../pages/admin/usersTable.html",
     script: "../../js/admin/usersTable.js",
