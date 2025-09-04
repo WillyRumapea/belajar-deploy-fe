@@ -36,10 +36,10 @@ buttonLogout.addEventListener("click", async (e) => {
 
     const result = await destroySession.json();
 
-    if (result.succes) {
-      alert("logout berhasil");
+    if (result.success) {
+      alert(result.message);
     } else {
-      alert("logout gagal" + result.message);
+      alert(result.message);
     }
   } catch (err) {
     console.log(err);
