@@ -7,7 +7,7 @@ const fetchDataOrders = async () => {
     throw new Error(`HTTP error! Status: ${reqDataOrders.status}`);
   }
 
-  const dataJson = await reqDataProds.json();
+  const dataJson = await reqDataOrders.json();
   const dataOrders = dataJson.data;
 
   const tbody = document.getElementsByClassName("tbody")[0];
