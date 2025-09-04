@@ -1,8 +1,4 @@
 const routes = {
-  dashboard: {
-    template: "../../pages/admin/dashboard.html",
-    script: "../../js/admin/dashboard.js",
-  },
   users: {
     template: "../../pages/admin/users.html",
     script: "../../js/admin/usersTable.js",
@@ -18,6 +14,18 @@ const routes = {
 };
 
 async function loadPage(page) {
+  if (page === "dashboard") {
+    try {
+      const response = await fetch("../../pages/admin/dashboard.html");
+      if (!response.ok) throw new Error("Gagal memuat dashboard");
+      const html = await response.text();
+      document.getElementById("content").innerHTML = html;
+    } catch (error) {
+      console.error("Error loading dashboard:", error);
+    }
+    return;
+  }
+
   const route = routes[page];
   if (!route) return;
 
@@ -31,27 +39,9 @@ async function loadPage(page) {
       const script = document.createElement("script");
       script.src = route.script;
       document.body.appendChild(script);
-
-      script.onload = () => {
-        callInitFunction(page);
-      };
-    } else {
-      callInitFunction(page);
     }
   } catch (error) {
     console.error("Error loading page:", error);
-  }
-}
-
-function callInitFunction(page) {
-  if (page === "users" && typeof fetchUserData === "function") {
-    fetchUserData();
-  } else if (page === "products" && typeof fetchProdsData === "function") {
-    fetchProdsData();
-  } else if (page === "orders" && typeof fetchOrdersData === "function") {
-    fetchOrdersData();
-  } else if (page === "dashboard" && typeof initDashboard === "function") {
-    initDashboard();
   }
 }
 
