@@ -29,6 +29,19 @@ async function loadPage(page) {
     } catch (err) {
       infoBrief.innerHTML = `<p style="color:red;">Error load products: ${err.message}</p>`;
     }
+  } else if (page === "orders") {
+    try {
+      const res = await fetch("./ordersTable.html");
+      const html = await res.text();
+
+      infoBrief.innerHTML = html;
+
+      const script = document.createElement("script");
+      script.setAttribute("src", "../../js/admin/ordersTable.js");
+      document.body.appendChild(script);
+    } catch (err) {
+      infoBrief.innerHTML = `<p style="color:red;">Error load products: ${err.message}</p>`;
+    }
   }
 }
 
