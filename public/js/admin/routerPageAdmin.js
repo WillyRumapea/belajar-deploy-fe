@@ -16,9 +16,9 @@ const routes = {
 async function loadPage(page) {
   if (page === "dashboard") {
     document.getElementById("content").innerHTML = `
-    <h2>Dashboard</h2>
-    <div class="brief-info"></div>
-  `;
+      <h2>Dashboard</h2>
+      <div class="brief-info"></div>
+    `;
     if (typeof initDashboard === "function") {
       initDashboard();
     }
@@ -34,11 +34,12 @@ async function loadPage(page) {
     const html = await response.text();
     document.getElementById("content").innerHTML = html;
 
-    if (!document.querySelector(`script[src="${route.script}"]`)) {
-      const script = document.createElement("script");
-      script.src = route.script;
-      document.body.appendChild(script);
-    }
+    const oldScript = document.querySelector(`script[src="${route.script}"]`);
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.src = route.script;
+    document.body.appendChild(script);
   } catch (error) {
     console.error("Error loading page:", error);
   }
