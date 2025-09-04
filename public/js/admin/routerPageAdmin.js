@@ -44,7 +44,7 @@ async function loadPage(page) {
   }
 }
 
-document.querySelectorAll(".nav-link").forEach((link) => {
+document.querySelectorAll(".navLink").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const page = link.getAttribute("data-page");
