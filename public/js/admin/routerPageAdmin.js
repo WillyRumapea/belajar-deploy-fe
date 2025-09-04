@@ -5,7 +5,7 @@ const routes = {
   },
   products: {
     template: "prodsTable.html",
-    script: "../../js/admin/prodsTable.js",
+    script: "../../js/admin/productsTable.js",
   },
   orders: {
     template: "ordersTable.html",
