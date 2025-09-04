@@ -168,6 +168,7 @@ buttonCheck.addEventListener("click", async (e) => {
         2
       )} km. Pesanan segera diantar`
     );
+    window.location.href = "../../index.html";
   } else {
     alert(
       `Lokasi berada dalam diluar jangkauan ${distance.toFixed(
