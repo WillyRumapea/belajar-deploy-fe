@@ -1,4 +1,4 @@
-const formUpdateMakanan = document.getElementById("form-update-makanan");
+let formUpdateMakanan = document.getElementById("form-update-makanan");
 async function fetchProdsData() {
   try {
     const reqDataProds = await fetch(
