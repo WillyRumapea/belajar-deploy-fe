@@ -13,11 +13,19 @@
         <tr>
           <th style="border: 1px solid black; padding: 8px">id makanan</th>
           <th style="border: 1px solid black; padding: 8px">nama makanan</th>
+          <th style="border: 1px solid black; padding: 8px">gambar makanan</th>
           <th style="border: 1px solid black; padding: 8px">harga makanan</th>
           <th style="border: 1px solid black; padding: 8px">opsi</th>
         </tr>
       </thead>
       <tbody class="tbody"></tbody>
     </table>
+    <form action="" id="form-update-makanan" style="display: none">
+      <input type="number" name="id_makanan" hidden />
+      <input type="text" name="nama_makanan" placeholder="nama makanan" />
+      <input type="text" name="gambar_makanan" placeholder="gambar makanan" />
+      <input type="text" name="harga_makanan" placeholder="harga_makanan" />
+      <button>update makanan</button>
+    </form>
   </body>
 </html>

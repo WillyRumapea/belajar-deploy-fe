@@ -1,3 +1,4 @@
+const formUpdateMakanan = document.getElementById("form-update-makanan");
 async function fetchProdsData() {
   try {
     const reqDataProds = await fetch(
@@ -23,16 +24,81 @@ async function fetchProdsData() {
         <td style="border: 1px solid black; padding: 8px;">${item.harga_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">
             <div>
-                <button>update</button>
-                <button>hapus</button>
+                <button class="update-makanan" data-id=${item.id_makanan}>update</button>
+                <button class="hapus-makanan" data-id=${item.id_makanan}>hapus</button>
             </div>
         </td>
     `;
       tbody.appendChild(row);
     });
+    const updatesMakananButton = document.querySelectorAll(".update-makanan");
+    console.log(updatesMakananButton);
+
+    updatesMakananButton.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const idMakanan = e.target.dataset.id;
+        const rowDataMakanan = e.target.closest("tr");
+        const nama_makanan = rowDataMakanan.cells[1].textContent;
+        const gambar_makanan = rowDataMakanan.cells[2].textContent;
+        const harga_makanan = rowDataMakanan.cells[3].textContent;
+
+        formUpdateMakanan.style.display = "block";
+
+        const inputIdMakanan = formUpdateMakanan.querySelector(
+          "input[name='id_makanan']"
+        );
+        const oldInputNamaMakanan = formUpdateMakanan.querySelector(
+          "input[name='nama_makanan']"
+        );
+        const oldInputGambarMakanan = formUpdateMakanan.querySelector(
+          "input[name='gambar_makanan']"
+        );
+        const oldInputHargaMakanan = formUpdateMakanan.querySelector(
+          "input[name='harga_makanan']"
+        );
+
+        inputIdMakanan.setAttribute("value", idMakanan);
+        oldInputNamaMakanan.value = nama_makanan;
+        oldInputGambarMakanan.value = gambar_makanan;
+        oldInputHargaMakanan.value = harga_makanan;
+      });
+    });
   } catch (err) {
     console.log("Error fetching data", err);
   }
 }
+
+formUpdateMakanan.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  try {
+    const data = {
+      id_makanan: formUpdateMakanan.inputIdMakanan.value,
+      nama_makanan: formUpdateMakanan.oldInputNamaMakanan.value,
+      gambar_makanan: formUpdateMakanan.oldInputGambarMakanan.value,
+      harga_makanan: formUpdateMakanan.oldInputHargaMakanan.value,
+    };
+    console.log(data);
+    const resUpdate = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/update-makanan",
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (resUpdate.ok) {
+      alert("makanan berhasil di update");
+      fetchProdsData();
+      formUpdateMakanan.style.display = "none";
+    }
+  } catch (err) {
+    alert("makanan gagal di update");
+    console.log("Err", err);
+  }
+});
 
 fetchProdsData();
