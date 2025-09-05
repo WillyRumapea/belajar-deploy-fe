@@ -21,6 +21,7 @@ async function fetchProdsData() {
       row.innerHTML = `
         <td style="border: 1px solid black; padding: 8px;">${item.id_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.nama_makanan}</td>
+        <td style="border: 1px solid black; padding: 8px;">${item.gambar_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.harga_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">
             <div>
