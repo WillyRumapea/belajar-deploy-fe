@@ -74,10 +74,16 @@ formUpdateMakanan.addEventListener("submit", async (e) => {
   e.preventDefault();
   try {
     const data = {
-      id_makanan: formUpdateMakanan.inputIdMakanan.value,
-      nama_makanan: formUpdateMakanan.oldInputNamaMakanan.value,
-      gambar_makanan: formUpdateMakanan.oldInputGambarMakanan.value,
-      harga_makanan: formUpdateMakanan.oldInputHargaMakanan.value,
+      id_makanan: formUpdateMakanan.querySelector("input[name='id_makanan'")
+        .value,
+      nama_makanan: formUpdateMakanan.querySelector("input[name='nama_makanan'")
+        .value,
+      gambar_makanan: formUpdateMakanan.querySelector(
+        "input[name='gambar_makanan'"
+      ).value,
+      harga_makanan: formUpdateMakanan.querySelector(
+        "input[name='harga_makanan'"
+      ).value,
     };
     console.log(data);
     const resUpdate = await fetch(
