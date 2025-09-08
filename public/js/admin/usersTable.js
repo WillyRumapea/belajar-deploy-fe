@@ -1,40 +1,109 @@
-async function fetchUserData() {
-  try {
-    const reqDataUsers = await fetch(
-      "https://belajar-deploy-api-production.up.railway.app/daftar-users"
-    );
+(() => {
+  const formUpdateUser = document.getElementById("form-update-user");
+  async function fetchUserData() {
+    try {
+      const reqDataUsers = await fetch(
+        "https://belajar-deploy-api-production.up.railway.app/daftar-users"
+      );
 
-    if (!reqDataUsers.ok) {
-      throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
-    }
-    const dataJsonUsers = await reqDataUsers.json();
-    console.log(dataJsonUsers);
-    const dataUser = dataJsonUsers.data;
-    console.log(dataUser);
+      if (!reqDataUsers.ok) {
+        throw new Error(`HTTP error! Status: ${reqDataUsers.status}`);
+      }
+      const dataJsonUsers = await reqDataUsers.json();
+      console.log(dataJsonUsers);
+      const dataUser = dataJsonUsers.data;
+      console.log(dataUser);
 
-    const tbody = document.getElementsByClassName("tbody")[0];
+      const tbody = document.getElementsByClassName("tbody")[0];
 
-    tbody.innerHTML = "";
+      tbody.innerHTML = "";
 
-    dataUser.forEach((item) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
+      dataUser.forEach((item) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
           <td style="border: 1px solid black; padding: 8px;">${item.users_id}</td>
           <td style="border: 1px solid black; padding: 8px;">${item.users_name}</td>
           <td style="border: 1px solid black; padding: 8px;">${item.users_password}</td>
           <td style="border: 1px solid black; padding: 8px;">${item.users_role}</td>
           <td style="border: 1px solid black; padding: 8px;">
               <div>
-                  <button>update</button>
-                  <button>hapus</button>
+                  <button class="update-user" data-id=${item.users_id}>update</button>
+                  <button class="hapus-user" data-id=${item.users_id}>hapus</button>
               </div>
           </td>
       `;
-      tbody.appendChild(row);
-    });
-  } catch (err) {
-    console.log("Error fetching data", err);
-  }
-}
+        tbody.appendChild(row);
+      });
+      const updatesUserButton = document.querySelectorAll(".update-users");
 
-fetchUserData();
+      updatesUserButton.forEach((btn) => {
+        btn.addEventListener((e) => {
+          e.preventDefault();
+          const idUser = e.target.dataset.id;
+          const rowDataUser = e.target.closest("tr");
+          const nama_user = rowDataUser.cells[1].textContent;
+          const password_user = rowDataUser.cells[2].textContent;
+          const role_user = rowDataUser.cells[3].textContent;
+
+          formUpdateUser.style.display = "block";
+
+          const inputIdUser = formUpdateUser.querySelector(
+            "input[name='users_id']"
+          );
+          const oldInputNamaUser = formUpdateUser.querySelector(
+            "input[name='users_name']"
+          );
+          const oldInputPasswordUser = formUpdateUser.querySelector(
+            "input[name='users_password']"
+          );
+          const oldInputRoleUser = formUpdateUser.querySelector(
+            "input[name='user_role']"
+          );
+
+          inputIdUser.setAttribute("value", idUser);
+          oldInputNamaUser.value = nama_user;
+          oldInputPasswordUser.value = password_user;
+          oldInputRoleUser.value = role_user;
+        });
+      });
+    } catch (err) {
+      console.log("Error fetching data", err);
+    }
+  }
+
+  formUpdateUser.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      const data = {
+        users_id: formUpdateUser.querySelector("input[name='users_id']"),
+        users_name: formUpdateUser.querySelector("input[name='users_name']"),
+        users_password: formUpdateUser.querySelector(
+          "input[name='users_password']"
+        ),
+        users_role: formUpdateUser.querySelector("input[name='users_role']"),
+      };
+      console.log(data);
+      const resUpdate = await fetch(
+        "https://belajar-deploy-api-production.up.railway.app/update-user",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (resUpdate.ok) {
+        alert("user berhasil di update");
+        fetchUserData();
+        formUpdateUser.style.display = "none";
+      }
+    } catch (err) {
+      alert("user gagal di update");
+      console.log(err);
+    }
+  });
+
+  fetchUserData();
+})();
