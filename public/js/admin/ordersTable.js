@@ -71,7 +71,7 @@
           );
 
           inputIdOrder.setAttribute("value", idOrder);
-          oldInputOrderCustomer.value = order_amount;
+          oldInputOrderCustomer.value = order_customer;
           oldInputOrderMenu.value = order_menu;
           oldInputOrderAmount.value = order_amount;
           oldInputOrderTotalPrice.value = order_total_price;
