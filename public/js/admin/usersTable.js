@@ -57,7 +57,7 @@
             "input[name='users_password']"
           );
           const oldInputRoleUser = formUpdateUser.querySelector(
-            "input[name='user_role']"
+            "input[name='users_role']"
           );
 
           inputIdUser.setAttribute("value", idUser);
