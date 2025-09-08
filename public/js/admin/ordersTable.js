@@ -1,5 +1,5 @@
 (() => {
-  const formUpdateUser = document.getElementById("form-update-orders");
+  const formUpdateOrder = document.getElementById("form-update-orders");
   async function fetchOrdersData() {
     try {
       const reqDataOrders = await fetch(
@@ -49,24 +49,24 @@
           const order_total_price = rowDataOrder.cells[4].textContent;
           const order_status = rowDataOrder.cells[5].textContent;
 
-          formUpdateUser.style.display = "block";
+          formUpdateOrder.style.display = "block";
 
-          const inputIdOrder = formUpdateUser.querySelector(
+          const inputIdOrder = formUpdateOrder.querySelector(
             "input[name='orders_id'"
           );
-          const oldInputOrderCustomer = formUpdateUser.querySelector(
+          const oldInputOrderCustomer = formUpdateOrder.querySelector(
             "input[name='orders_customer'"
           );
-          const oldInputOrderMenu = formUpdateUser.querySelector(
+          const oldInputOrderMenu = formUpdateOrder.querySelector(
             "input[name='orders_menu'"
           );
-          const oldInputOrderAmount = formUpdateUser.querySelector(
+          const oldInputOrderAmount = formUpdateOrder.querySelector(
             "input[name='orders_amount'"
           );
-          const oldInputOrderTotalPrice = formUpdateUser.querySelector(
+          const oldInputOrderTotalPrice = formUpdateOrder.querySelector(
             "input[name='orders_total_price'"
           );
-          const oldInputOrderStatus = formUpdateUser.querySelector(
+          const oldInputOrderStatus = formUpdateOrder.querySelector(
             "input[name='orders_status'"
           );
 
@@ -83,24 +83,26 @@
     }
   }
 
-  formUpdateUser.addEventListener("click", async (e) => {
+  formUpdateOrder.addEventListener("click", async (e) => {
     e.preventDefault();
     try {
       const data = {
-        orders_id: formUpdateUser.querySelector("input[name='orders_id'"),
-        orders_customer: formUpdateUser.querySelector(
+        orders_id: formUpdateOrder.querySelector("input[name='orders_id'")
+          .value,
+        orders_customer: formUpdateOrder.querySelector(
           "input[name='orders_customer'"
-        ),
-        orders_menu: formUpdateUser.querySelector("input[name='orders_menu'"),
-        orders_amount: formUpdateUser.querySelector(
+        ).value,
+        orders_menu: formUpdateOrder.querySelector("input[name='orders_menu'")
+          .value,
+        orders_amount: formUpdateOrder.querySelector(
           "input[name='orders_amount'"
-        ),
-        orders_total_pice: formUpdateUser.querySelector(
+        ).value,
+        orders_total_pice: formUpdateOrder.querySelector(
           "input[name='orders_total_price'"
-        ),
-        orders_status: formUpdateUser.querySelector(
+        ).value,
+        orders_status: formUpdateOrder.querySelector(
           "input[name='orders_status'"
-        ),
+        ).value,
       };
       console.log(data);
 
