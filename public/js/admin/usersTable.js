@@ -37,7 +37,7 @@
       const updatesUserButton = document.querySelectorAll(".update-user");
 
       updatesUserButton.forEach((btn) => {
-        btn.addEventListener((e) => {
+        btn.addEventListener("click", (e) => {
           e.preventDefault();
           const idUser = e.target.dataset.id;
           const rowDataUser = e.target.closest("tr");
