@@ -24,5 +24,22 @@
       </thead>
       <tbody class="tbody"></tbody>
     </table>
+    <form action="" id="form-update-orders" style="display: none">
+      <input type="text" name="orders_id" hidden />
+      <input type="text" name="orders_customer" id="orders_customer" />
+      <input type="text" name="orders_menu" id="orders_menu" />
+      <input type="number" name="orders_amount" id="orders_amount" />
+      <input type="number" name="orders_total_price" id="orders_total_price" />
+      <input type="hidden" name="orders_status" value="0" />
+      <label for="orders_status">
+        pay confirmed ?
+        <input
+          type="checkbox"
+          name="orders_status"
+          id="orders_status"
+          value="1"
+        />
+      </label>
+    </form>
   </body>
 </html>
