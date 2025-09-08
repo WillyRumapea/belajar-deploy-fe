@@ -120,7 +120,7 @@
       if (resUpdate.ok) {
         alert("order data berhasil di update");
         fetchOrdersData();
-        formUpdateUser.style.display = "none";
+        formUpdateOrder.style.display = "none";
       }
     } catch (err) {
       alert("data user gagal di update");
