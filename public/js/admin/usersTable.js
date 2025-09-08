@@ -34,7 +34,7 @@
       `;
         tbody.appendChild(row);
       });
-      const updatesUserButton = document.querySelectorAll(".update-users");
+      const updatesUserButton = document.querySelectorAll(".update-user");
 
       updatesUserButton.forEach((btn) => {
         btn.addEventListener((e) => {
