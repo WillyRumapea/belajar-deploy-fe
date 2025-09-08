@@ -35,7 +35,7 @@
     `;
         tbody.appendChild(row);
       });
-      const updateOrdersButtons = document.getElementById(".update-orders");
+      const updateOrdersButtons = document.querySelectorAll(".update-orders");
       console.log(updateOrdersButtons);
 
       updateOrdersButtons.forEach((btn) => {
