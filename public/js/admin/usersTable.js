@@ -75,12 +75,14 @@
     e.preventDefault();
     try {
       const data = {
-        users_id: formUpdateUser.querySelector("input[name='users_id']"),
-        users_name: formUpdateUser.querySelector("input[name='users_name']"),
+        users_id: formUpdateUser.querySelector("input[name='users_id']").value,
+        users_name: formUpdateUser.querySelector("input[name='users_name']")
+          .value,
         users_password: formUpdateUser.querySelector(
           "input[name='users_password']"
-        ),
-        users_role: formUpdateUser.querySelector("input[name='users_role']"),
+        ).value,
+        users_role: formUpdateUser.querySelector("input[name='users_role']")
+          .value,
       };
       console.log(data);
       const resUpdate = await fetch(
