@@ -35,7 +35,7 @@
       });
       const updatesMakananButton = document.querySelectorAll(".update-makanan");
       console.log(updatesMakananButton);
-      const deleteProductButtons = document.querySelectorAll(".update-makanan");
+      const deleteProductButtons = document.querySelectorAll(".hapus-makanan");
       console.log(deleteProductButtons);
 
       updatesMakananButton.forEach((btn) => {
