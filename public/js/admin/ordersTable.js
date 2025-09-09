@@ -37,6 +37,8 @@
       });
       const updateOrdersButtons = document.querySelectorAll(".update-orders");
       console.log(updateOrdersButtons);
+      const deleteOrdersButtons = document.querySelectorAll(".delete-orders");
+      console.log(deleteOrdersButtons);
 
       updateOrdersButtons.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -76,6 +78,33 @@
           oldInputOrderAmount.value = order_amount;
           oldInputOrderTotalPrice.value = order_total_price;
           oldInputOrderStatus.checked = order_status == 1;
+        });
+      });
+
+      deleteOrdersButtons.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const idOrder = e.target.dataset.id;
+
+          try {
+            const responseDelete = await fetch(
+              `https://belajar-deploy-api-production.up.railway.app/hapus-order/${idOrder}`,
+              {
+                method: "DELETE",
+              }
+            );
+            const resultDelete = await responseDelete.json();
+            if (resultDelete.success) {
+              alert("Order berhasil dihapus");
+              e.target.closest("tr").remove();
+              console.log(resultDelete);
+            } else {
+              alert("Order gagal dihapus" + resultDelete.message);
+            }
+          } catch (err) {
+            console.log(err);
+          }
         });
       });
     } catch (err) {
