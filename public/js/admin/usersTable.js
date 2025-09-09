@@ -35,6 +35,7 @@
         tbody.appendChild(row);
       });
       const updatesUserButton = document.querySelectorAll(".update-user");
+      const deleteUserButtons = document.querySelectorAll(".hapus-user");
 
       updatesUserButton.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -64,6 +65,32 @@
           oldInputNamaUser.value = nama_user;
           oldInputPasswordUser.value = password_user;
           oldInputRoleUser.value = role_user;
+        });
+      });
+      deleteUserButtons.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const idUser = e.target.dataset.id;
+
+          try {
+            const responseDelete = await fetch(
+              `https://belajar-deploy-api-production.up.railway.app/hapus-user/${idUser}`,
+              {
+                method: "DELETE",
+              }
+            );
+            const resultDelete = await responseDelete.json();
+            if (resultDelete.success) {
+              alert("User berhasil dihapus");
+              e.target.closest("tr").remove();
+              console.log(resultDelete);
+            } else {
+              alert("User gagal dihapus" + resultDelete.message);
+            }
+          } catch (err) {
+            console.log(err);
+          }
         });
       });
     } catch (err) {

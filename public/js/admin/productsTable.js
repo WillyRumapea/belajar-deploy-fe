@@ -35,6 +35,8 @@
       });
       const updatesMakananButton = document.querySelectorAll(".update-makanan");
       console.log(updatesMakananButton);
+      const deleteMakananButtons = document.querySelectorAll(".update-makanan");
+      console.log(deleteMakananButtons);
 
       updatesMakananButton.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -64,6 +66,32 @@
           oldInputNamaMakanan.value = nama_makanan;
           oldInputGambarMakanan.value = gambar_makanan;
           oldInputHargaMakanan.value = harga_makanan;
+        });
+      });
+      deleteProductsButtons.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const idProds = e.target.dataset.id;
+
+          try {
+            const responseDelete = await fetch(
+              `https://belajar-deploy-api-production.up.railway.app/hapus-makanan/${idProds}`,
+              {
+                method: "DELETE",
+              }
+            );
+            const resultDelete = await responseDelete.json();
+            if (resultDelete.success) {
+              alert("Product berhasil dihapus");
+              e.target.closest("tr").remove();
+              console.log(resultDelete);
+            } else {
+              alert("Product gagal dihapus" + resultDelete.message);
+            }
+          } catch (err) {
+            console.log(err);
+          }
         });
       });
     } catch (err) {
