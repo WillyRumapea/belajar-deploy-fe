@@ -35,8 +35,8 @@
       });
       const updatesMakananButton = document.querySelectorAll(".update-makanan");
       console.log(updatesMakananButton);
-      const deleteMakananButtons = document.querySelectorAll(".update-makanan");
-      console.log(deleteMakananButtons);
+      const deleteProductButtons = document.querySelectorAll(".update-makanan");
+      console.log(deleteProductButtons);
 
       updatesMakananButton.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -68,7 +68,7 @@
           oldInputHargaMakanan.value = harga_makanan;
         });
       });
-      deleteProductsButtons.forEach((btn) => {
+      deleteProductButtons.forEach((btn) => {
         btn.addEventListener("click", async (e) => {
           e.preventDefault();
 
