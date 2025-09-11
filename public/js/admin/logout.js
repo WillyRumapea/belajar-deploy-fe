@@ -17,6 +17,7 @@ buttonLogout.addEventListener("click", async (e) => {
 
     if (result.success) {
       alert(result.message);
+      window.location.href = "../../page/user/formLogin.html";
     } else {
       alert(result.message);
     }
