@@ -22,6 +22,7 @@ async function loadPage(page) {
     document.getElementById("content").innerHTML = `
       <h2>Dashboard</h2>
       <div class="brief-info"></div>
+      <button id="logoutAccount">logout</button>
     `;
 
     const oldScript = document.querySelector(
