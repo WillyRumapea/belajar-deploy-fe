@@ -3,7 +3,10 @@
   async function fetchUserData() {
     try {
       const reqDataUsers = await fetch(
-        "https://belajar-deploy-api-production.up.railway.app/daftar-users"
+        "https://belajar-deploy-api-production.up.railway.app/daftar-users",
+        {
+          credentials: "include",
+        }
       );
 
       if (!reqDataUsers.ok) {
@@ -78,6 +81,7 @@
               `https://belajar-deploy-api-production.up.railway.app/hapus-user/${idUser}`,
               {
                 method: "DELETE",
+                credentials: "include",
               }
             );
             const resultDelete = await responseDelete.json();
@@ -119,6 +123,7 @@
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(data),
         }
       );

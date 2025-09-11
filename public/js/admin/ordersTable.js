@@ -3,7 +3,10 @@
   async function fetchOrdersData() {
     try {
       const reqDataOrders = await fetch(
-        "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan"
+        "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan",
+        {
+          credentials: "include",
+        }
       );
 
       if (!reqDataOrders.ok) {
@@ -92,6 +95,7 @@
               `https://belajar-deploy-api-production.up.railway.app/hapus-order/${idOrder}`,
               {
                 method: "DELETE",
+                credentials: "include",
               }
             );
             const resultDelete = await responseDelete.json();
@@ -144,6 +148,7 @@
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(data),
         }
       );
