@@ -79,6 +79,7 @@
               `https://belajar-deploy-api-production.up.railway.app/hapus-makanan/${idProds}`,
               {
                 method: "DELETE",
+                credentials: "include",
               }
             );
             const resultDelete = await responseDelete.json();
@@ -123,6 +124,7 @@
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(data),
         }
       );
