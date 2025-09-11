@@ -8,7 +8,10 @@ function initDashboard() {
   async function fetchBriefUsers() {
     try {
       const reqDataUsers = await fetch(
-        "https://belajar-deploy-api-production.up.railway.app/daftar-users"
+        "https://belajar-deploy-api-production.up.railway.app/daftar-users",
+        {
+          credentials: "include",
+        }
       );
 
       if (!reqDataUsers.ok) {
