@@ -1,9 +1,33 @@
-function initDashboard() {
+async function initDashboard() {
   const briefInfo = document.querySelector(".brief-info");
 
   if (!briefInfo) return;
 
   briefInfo.innerHTML = "";
+
+  try {
+    const reqSession = await fetch(
+      "https://belajar-deploy-api-production.up.railway.app/check-session",
+      {
+        credentials: "include",
+      }
+    );
+
+    if (!reqSession.ok) {
+      throw new Error(`Session check failed: ${reqSession.status}`);
+    }
+
+    const sessionData = await reqSession.json();
+
+    if (!sessionData.loggedin || sessionData.user.role !== "admin") {
+      window.location.href = "../user/formLogin.html";
+      return;
+    }
+  } catch (err) {
+    console.error("Error checking session:", err);
+    window.location.href = "../user/login.html";
+    return;
+  }
 
   async function fetchBriefUsers() {
     try {
