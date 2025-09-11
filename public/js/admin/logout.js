@@ -1,4 +1,5 @@
 const buttonLogout = document.getElementById("logoutAccount");
+console.log(buttonLogout);
 
 buttonLogout.addEventListener("click", async (e) => {
   e.preventDefault();
