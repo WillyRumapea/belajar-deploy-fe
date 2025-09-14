@@ -1,4 +1,4 @@
-const buttonLogoutAdmin = document.getElementById("logoutDashboardAdmin");
+let buttonLogoutAdmin = document.getElementById("logoutDashboardAdmin");
 
 buttonLogoutAdmin.addEventListener("click", async (e) => {
   e.preventDefault();
