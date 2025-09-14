@@ -10,6 +10,7 @@ const formDelivery = document.getElementById("form-delivery");
 const buttonAntar = document.getElementById("antar");
 const buttonTidakAntar = document.getElementById("tidak-antar");
 const deliveryOption = document.getElementById("delivery-option");
+const h3Message = document.getElementById("message-after-order");
 const body = document.body;
 
 let map;
@@ -19,10 +20,12 @@ buttonAntar.addEventListener("click", (e) => {
   e.preventDefault();
   formDelivery.style.display = "block";
   deliveryOption.style.display = "none";
+  h3Message.textContent = "Silahkan masukkan alamat pengantaran";
 });
 
 buttonTidakAntar.addEventListener("click", (e) => {
   e.preventDefault();
+  h3Message.textContent = "Silahkan jemput pesanan pada alamat tertera";
   deliveryOption.style.display = "none";
   formDelivery.style.display = "none";
   alert("Silahkan jemput ke alamat tertera");
