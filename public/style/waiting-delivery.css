@@ -6,3 +6,7 @@
 #form-delivery {
   display: none;
 }
+
+#delivery-option {
+  display: block;
+}

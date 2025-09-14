@@ -9,6 +9,7 @@ const buttonCheck = document.getElementById("checkDistance");
 const formDelivery = document.getElementById("form-delivery");
 const buttonAntar = document.getElementById("antar");
 const buttonTidakAntar = document.getElementById("tidak-antar");
+const deliveryOption = document.getElementById("delivery-option");
 const body = document.body;
 
 let map;
@@ -17,10 +18,12 @@ let marker;
 buttonAntar.addEventListener("click", (e) => {
   e.preventDefault();
   formDelivery.style.display = "block";
+  deliveryOption.style.display = "none";
 });
 
 buttonTidakAntar.addEventListener("click", (e) => {
   e.preventDefault();
+  deliveryOption.style.display = "none";
   formDelivery.style.display = "none";
   alert("Silahkan jemput ke alamat tertera");
   const tengkuRiceBowl = document.createElement("p");
