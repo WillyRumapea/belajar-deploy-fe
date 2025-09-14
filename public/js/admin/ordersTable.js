@@ -80,7 +80,7 @@
           oldInputOrderMenu.value = order_menu;
           oldInputOrderAmount.value = order_amount;
           oldInputOrderTotalPrice.value = order_total_price;
-          oldInputOrderStatus.checked = order_status == 1;
+          oldInputOrderStatus.checked = order_status == "1";
         });
       });
 
