@@ -1,26 +1,32 @@
-let buttonLogoutAdmin = document.getElementById("logoutDashboardAdmin");
+function initLogout() {
+  const buttonLogoutAdmin = document.getElementById("logoutDashboardAdmin");
+  if (!buttonLogoutAdmin) return;
 
-buttonLogoutAdmin.addEventListener("click", async (e) => {
-  e.preventDefault();
+  if (buttonLogoutAdmin.dataset.listenerAttached === "true") return;
 
-  try {
-    const destroySession = await fetch(
-      "https://belajar-deploy-api-production.up.railway.app/logout",
-      {
-        method: "POST",
-        credentials: "include",
+  buttonLogoutAdmin.addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    try {
+      const destroySession = await fetch(
+        "https://belajar-deploy-api-production.up.railway.app/logout",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
+
+      const result = await destroySession.json();
+
+      if (result.success) {
+        alert(result.message);
+      } else {
+        alert(result.message);
       }
-    );
-
-    const result = await destroySession.json();
-
-    if (result.success) {
-      alert(result.message);
-    } else {
-      alert(result.message);
+    } catch (err) {
+      console.log(err);
+      alert("terjadi kesalahan saat logout");
     }
-  } catch (err) {
-    console.log(err);
-    alert("terjadi kesalahan saat logout");
-  }
-});
+  });
+  buttonLogoutAdmin.dataset.listenerAttached = "true";
+}

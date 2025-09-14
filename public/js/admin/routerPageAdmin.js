@@ -46,8 +46,12 @@ async function loadPage(page) {
 
     const logoutScript = document.createElement("script");
     logoutScript.src = "../../js/admin/logout.js";
+    logoutScript.onload = () => {
+      if (typeof initLogout === "function") {
+        initLogout();
+      }
+    };
     document.body.appendChild(logoutScript);
-
     return;
   }
 
