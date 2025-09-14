@@ -22,6 +22,7 @@ async function loadPage(page) {
     document.getElementById("content").innerHTML = `
       <h2>Dashboard</h2>
       <div class="brief-info"></div>
+      <button id="logoutDashboardAdmin">logout</button>
     `;
 
     const oldScript = document.querySelector(
@@ -37,6 +38,15 @@ async function loadPage(page) {
       }
     };
     document.body.appendChild(script);
+
+    const oldLogoutScript = document.querySelector(
+      `script[src="../../js/admin/logout.js"]`
+    );
+    if (oldLogoutScript) oldLogoutScript.remove();
+
+    const logoutScript = document.createElement("script");
+    logoutScript.src = "../../js/admin/logout.js";
+    document.body.appendChild(logoutScript);
 
     return;
   }
