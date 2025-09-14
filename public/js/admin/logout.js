@@ -20,6 +20,7 @@ function initLogout() {
 
       if (result.success) {
         alert(result.message);
+        window.location.href = "../../index.html";
       } else {
         alert(result.message);
       }
