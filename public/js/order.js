@@ -142,7 +142,7 @@ const getDataFetch = async () => {
             "border-2",
             "p-2",
             "rounded-lg",
-            "w-[90%]",
+            "w-[80%]",
             "gap-2"
           );
           orderedList.appendChild(orderedMenu);
