@@ -108,6 +108,14 @@ const getDataFetch = async () => {
           qtyWrapper.appendChild(inputQty);
           qtyWrapper.appendChild(btnPls);
 
+          orderedList.classList.add(
+            "flex",
+            "flex-col",
+            "justify-center",
+            "items-center",
+            "border-2",
+            "p-2"
+          );
           orderedList.appendChild(orderedMenu);
           orderedList.appendChild(qtyWrapper);
 
