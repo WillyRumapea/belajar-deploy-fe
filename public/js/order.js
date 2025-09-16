@@ -27,7 +27,18 @@ const getDataFetch = async () => {
     imgProd.style.width = "150px";
     imgProd.style.height = "100px";
     buttonAddProd.textContent = "tambahkan";
+    buttonAddProd.style.backgroundColor = "#de5418";
     buttonAddProd.setAttribute("data-id", prod.id_makanan);
+    cardMenu.classList.add(
+      "flex",
+      "flex-col",
+      "items-center",
+      "gap-2",
+      "border-white",
+      "p-2",
+      "rounded-lg",
+      "bg-gilled"
+    );
 
     buttonAddProd.addEventListener("click", () => {
       const idProd = parseInt(buttonAddProd.getAttribute("data-id"));
