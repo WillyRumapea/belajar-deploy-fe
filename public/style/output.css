@@ -676,8 +676,16 @@ button {
   height: auto;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-screen{
   height: 100vh;
+}
+
+.w-1\/2{
+  width: 50%;
 }
 
 .w-\[15\%\]{

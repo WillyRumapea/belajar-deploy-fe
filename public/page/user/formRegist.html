@@ -3,34 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/output.css" />
     <title>Regist Ricebowlku</title>
   </head>
-  <body>
-    <h1>Form Regist</h1>
-    <form action="" id="formRegist">
-      <label for="username">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Username"
-          required
-        />
-      </label>
-      <label for="password">
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="ur password"
-          required
-        />
-      </label>
-      <div>
-        <button id="buttonRegis">Regis!</button>
-      </div>
-      <div>sudah punya akun ? klik <a href="./formLogin.html">disini</a></div>
-    </form>
+  <body class="font-jost flex h-screen border-2">
+    <div class="sideImage w-1/2 h-full bg-logo bg-cover bg-center"></div>
+    <div class="registPage border-2 w-[50%] pt-[150px] bg-cornsilk">
+      <h1 class="text-center text-earthyBrown">Form Regist</h1>
+      <p class="text-center text-crimson">
+        Silahkan daftar untuk kenikmatan yang menantimu
+      </p>
+      <form
+        action=""
+        id="formRegist"
+        class="flex flex-col items-center justify-center w-[80%] mt-[20px] gap-2 ml-[50px]"
+      >
+        <div class="flex flex-col">
+          <label for="username" class="text-earthyBrown">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="jhondoe"
+            class="w-[350px]"
+            required
+          />
+        </div>
+        <div class="flex flex-col text-earthyBrown">
+          <label for="password" class="text-earthyBrown">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="jhondoe123"
+            class="w-[350px]"
+            required
+          />
+        </div>
+        <div>
+          <button
+            id="buttonRegis"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded mt-4"
+          >
+            Regis!
+          </button>
+        </div>
+        <div>
+          sudah punya akun ? klik
+          <a href="./formLogin.html" class="text-earthyBrown">disini</a>
+        </div>
+      </form>
+    </div>
     <script src="../../js/formRegist.js"></script>
   </body>
 </html>
