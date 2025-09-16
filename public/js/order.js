@@ -37,7 +37,7 @@ const getDataFetch = async () => {
       "border-white",
       "p-2",
       "rounded-lg",
-      "bg-gilled"
+      "w-[200px]"
     );
 
     buttonAddProd.addEventListener("click", () => {
