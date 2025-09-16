@@ -65,7 +65,8 @@ const getDataFetch = async () => {
             "flex",
             "gap-2",
             "items-center",
-            "justify-center"
+            "justify-center",
+            "border-2"
           );
           const btnMin = document.createElement("button");
           btnMin.classList.add(
