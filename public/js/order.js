@@ -75,7 +75,8 @@ const getDataFetch = async () => {
             "text-white",
             "p-1",
             "rounded-lg",
-            "w-[40px]"
+            "w-[40px]",
+            "h-[40px]"
           );
           const inputQty = document.createElement("input");
           inputQty.setAttribute("type", "number");
@@ -89,7 +90,8 @@ const getDataFetch = async () => {
             "text-white",
             "p-1",
             "rounded-lg",
-            "w-[40px]"
+            "w-[40px]",
+            "h-[40px]"
           );
 
           detailNameProd.value = selectedMenu.nama_makanan;
