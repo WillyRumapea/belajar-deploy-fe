@@ -68,7 +68,13 @@ const getDataFetch = async () => {
             "justify-center"
           );
           const btnMin = document.createElement("button");
-          btnMin.classList.add("bg-crimson", "text-white", "p-1", "rounded-lg");
+          btnMin.classList.add(
+            "bg-crimson",
+            "text-white",
+            "p-1",
+            "rounded-lg",
+            "w-[40px]"
+          );
           const inputQty = document.createElement("input");
           inputQty.setAttribute("type", "number");
           inputQty.setAttribute("name", "orders_amount");
@@ -76,7 +82,13 @@ const getDataFetch = async () => {
           inputQty.min = 1;
           inputQty.value = 1;
           const btnPls = document.createElement("button");
-          btnPls.classList.add("bg-crimson", "text-white", "p-1", "rounded-lg");
+          btnPls.classList.add(
+            "bg-crimson",
+            "text-white",
+            "p-1",
+            "rounded-lg",
+            "w-[40px]"
+          );
 
           detailNameProd.value = selectedMenu.nama_makanan;
           detailPriceProd.textContent = selectedMenu.harga_makanan;
