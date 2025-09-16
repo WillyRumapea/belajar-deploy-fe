@@ -3,49 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Rice Bowl!</title>
     <link rel="stylesheet" href="../../style/order-style.css" />
+    <link rel="stylesheet" href="../../style/output.css" />
+    <title>Order Rice Bowl!</title>
     <script
       type="text/javascript"
       src="https://app.sandbox.midtrans.com/snap/snap.js"
       data-client-key="Mid-client-rMRmHnugvJbnDaYY"
     ></script>
   </head>
-  <body>
-    <h1 class="">Form Pemesanan</h1>
-    <div class="">
-      <div id="data-order">
-        <form action="" id="form-order">
+  <body class="font-jost bg-paleYellow">
+    <h1 class="text-center text-earthyBrown font-bolder">Form Pemesanan</h1>
+    <p class="text-center text-earthyBrown">Pesan ricebowl sesuai seleramu!</p>
+    <div class="flex">
+      <div id="data-order" class="w-[40%] h-screen bg-paleYellow">
+        <form
+          action=""
+          id="form-order"
+          class="flex flex-col items-center gap-3 pl-10 mt-14 ml-14 2"
+        >
           <div>
             <input
               type="text"
               id=""
-              placeholder="first name"
+              placeholder="nama pembeli"
               name="first_name"
+              class="w-[300px]"
+              required
             />
           </div>
           <div>
-            <button id="button-add-order">+</button>
+            <button
+              id="button-add-order"
+              class="border-black bg-crimson w-[80px] p-2 rounded-lg text-white"
+            >
+              +
+            </button>
           </div>
-          <div id="ordered-list"></div>
+          <div id="ordered-list" class="border-earthyBrown"></div>
           <div>
             <input
               type="number"
               id="amount-price"
               placeholder="bill"
+              class="w-[300px]"
               name="gross_amount"
               readonly
             />
           </div>
-          <div id="button-container">
-            <button id="cash-button">cash</button>
-            <button class="" id="cashless-button">cashless</button>
+          <div
+            id="button-container"
+            class="border-earthyBrowntext-left pl-12 w-[400px]"
+          >
+            <p class="font-bolder mb-5">Payment Method</p>
+            <button
+              class="bg-gilled p-2 rounded-lg text-white font-bold"
+              id="cash-button"
+            >
+              cash
+            </button>
+            <button
+              class="bg-gilled p-2 rounded-lg text-white font-bold"
+              id="cashless-button"
+            >
+              cashless
+            </button>
           </div>
         </form>
       </div>
-      <div id="list-menu" class="">
+      <div id="list-menu" class="border-black w-[60%]">
         <h1>daftar makanan</h1>
-        <div class="" id="list-card-menu"></div>
+        <div
+          class=""
+          id="list-card-menu"
+          class="flex flex-warp w-[80%] justify-center items-center gap-3"
+        ></div>
       </div>
     </div>
     <script type="module" src="../../js/order.js"></script>

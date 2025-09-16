@@ -12,6 +12,8 @@ module.exports = {
         earthyBrown: "#943a2c",
         crimson: "#c24319",
         floralWhite: "#fffcf5",
+        paleYellow: "#fffceb",
+        gilled: "#de5418",
       },
       fontWeight: {
         normal: 500,
