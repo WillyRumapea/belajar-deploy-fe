@@ -28,7 +28,7 @@ const getDataFetch = async () => {
     imgProd.style.height = "100px";
     buttonAddProd.textContent = "tambahkan";
     buttonAddProd.style.backgroundColor = "#de5418";
-    buttonAddOrder.classList.add("p-2", "rounded-lg", "text-white");
+    buttonAddProd.classList.add("p-2", "rounded-lg", "text-white");
     buttonAddProd.setAttribute("data-id", prod.id_makanan);
     cardMenu.classList.add(
       "flex",
