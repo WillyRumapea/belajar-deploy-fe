@@ -37,7 +37,7 @@ const getDataFetch = async () => {
       "border-white",
       "p-2",
       "rounded-lg",
-      "w-[30%]",
+      "w-[200px]",
       "border-2",
       "border-crimson"
     );
