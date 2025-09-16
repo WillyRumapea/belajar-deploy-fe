@@ -72,6 +72,7 @@ const getDataFetch = async () => {
           const inputQty = document.createElement("input");
           inputQty.setAttribute("type", "number");
           inputQty.setAttribute("name", "orders_amount");
+          inputQty.classList.add("text-center");
           inputQty.min = 1;
           inputQty.value = 1;
           const btnPls = document.createElement("button");
@@ -123,7 +124,8 @@ const getDataFetch = async () => {
             "items-center",
             "border-2",
             "p-2",
-            "rounded-lg"
+            "rounded-lg",
+            "w-[70%]"
           );
           orderedList.appendChild(orderedMenu);
           orderedList.appendChild(qtyWrapper);
