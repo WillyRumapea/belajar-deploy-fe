@@ -596,6 +596,10 @@ button {
   margin-left: 10px;
 }
 
+.ml-\[50px\]{
+  margin-left: 50px;
+}
+
 .ml-\[80px\]{
   margin-left: 80px;
 }
@@ -614,6 +618,10 @@ button {
 
 .mt-\[140px\]{
   margin-top: 140px;
+}
+
+.mt-\[20px\]{
+  margin-top: 20px;
 }
 
 .mt-\[50px\]{
@@ -688,6 +696,10 @@ button {
   width: 250px;
 }
 
+.w-\[350px\]{
+  width: 350px;
+}
+
 .w-\[45\%\]{
   width: 45%;
 }
@@ -760,6 +772,10 @@ button {
   justify-content: space-evenly;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
@@ -774,6 +790,10 @@ button {
 
 .border{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
 }
 
 .border-white\/20{
@@ -802,6 +822,14 @@ button {
 
 .bg-white\/30{
   background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-center{
+  background-position: center;
 }
 
 .object-contain{
@@ -838,6 +866,10 @@ button {
 
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pt-\[150px\]{
+  padding-top: 150px;
 }
 
 .pt-\[180px\]{
@@ -924,9 +956,9 @@ button {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
