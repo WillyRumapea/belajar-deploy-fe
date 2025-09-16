@@ -68,7 +68,6 @@ const getDataFetch = async () => {
             "gap-2",
             "items-center",
             "justify-center",
-            "border-2",
             "w-full"
           );
           const btnMin = document.createElement("button");
@@ -143,7 +142,8 @@ const getDataFetch = async () => {
             "border-2",
             "p-2",
             "rounded-lg",
-            "w-[70%]"
+            "w-[70%]",
+            "gap-2"
           );
           orderedList.appendChild(orderedMenu);
           orderedList.appendChild(qtyWrapper);
