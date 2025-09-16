@@ -3,33 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/ouput.css" />
     <title>Login Ricebowlku</title>
   </head>
-  <body>
-    <h1>Form Login</h1>
-    <form action="" id="formLogin">
-      <label for="username">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Username"
-          required
-        />
-      </label>
-      <label for="password">
+  <body class="font-jost flex border-2">
+    <div class="loginPage border-2 w-[50%] pt-[150px] bg-bisque">
+      <h1 class="text-center text-earthyBrown">Holla, Welcome Back!</h1>
+      <p class="text-center text-crimson">
+        Selamat datang kembali ditempat makan kesukaan mu
+      </p>
+      <form
+        action=""
+        id="formLogin"
+        class="flex flex-col items-center justify-center w-[80%] mt-[20px] gap-2 ml-[50px]"
+      >
+        <div class="flex flex-col">
+          <label for="username" class="text-earthyBrown">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="jhondoe"
+            class="w-[350px]"
+            required
+          />
+        </div>
+        <div class="flex flex-col"></div>
+        <label for="password" class="text-earthyBrown"> </label>
         <input
           type="password"
           id="password"
           name="password"
-          placeholder="ur password"
+          placeholder="jhondoe123"
+          class="w-[350px]"
           required
         />
-      </label>
-      <div>
-        <button id="buttonLogin">Login!</button>
-      </div>
-    </form>
+        <div>
+          <button
+            id="buttonLogin"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded mt-4"
+          >
+            Login!
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="sideImage h-screen bg-logo bg-cover bg-center"></div>
     <script src="../../js/formLogin.js"></script>
   </body>
 </html>
