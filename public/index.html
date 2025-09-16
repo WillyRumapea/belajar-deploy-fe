@@ -3,24 +3,412 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/output.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Ini Homepage</title>
-    <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
-    <h1>RiceBowl ku!</h1>
-    <img
-      src="./image/ricebowl-chicken-blackpapper.jpg"
-      alt=""
-      id="img-homepage"
-    />
-    <p>simple, rich flavour and delicious</p>
-    <button id="toOrderForm">order</button>
+    <header
+      class="flex flex-col py-[0.8rem] fixed z-[100] top-0.5 w-full bg-white/30 backdrop-blur-md border-white/20 shadow-lg"
+    >
+      <nav class="flex flex-row justify-around items-center">
+        <h1 class="text-crimson">RiceBowl ku!</h1>
+        <ul class="flex flex-row w-[45%] justify-evenly items-center">
+          <li>
+            <a href="#homepage" class="nav-link text-earthyBrown">Homepage</a>
+          </li>
+          <li>
+            <a href="#about-us" class="nav-lin text-earthyBrown">About Us</a>
+          </li>
+          <li>
+            <a href="#products" class="nav-link text-earthyBrown">Product</a>
+          </li>
+          <li>
+            <a href="#testimoni" class="nav-link text-earthyBrown">Testimoni</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link text-earthyBrown">Contact</a>
+          </li>
+        </ul>
+        <div class="w-[15%] flex flex-row justify-evenly">
+          <button
+            id="toLoginForm"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded"
+          >
+            login
+          </button>
+          <button
+            id="toRegistForm"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded"
+          >
+            regist
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="homepage" class="flex h-screen bg-bisque pt-[90px]">
+        <div>
+          <img
+            src="./image/ricebowl-ayam-geprek.png"
+            alt=""
+            class="w-full h-[400px] object-contain mt-10 pl-[30px]"
+            id="img-homepage"
+          />
+        </div>
+        <div
+          class="info-homepage w-[50%] pb-[100px] ml-[80px] mt-[140px] font-bold"
+        >
+          <p class="text-5xl text-earthyBrown">RiceBowl ku!</p>
+          <p class="text-3xl text-earthyBrown leading-10">
+            Simple, Delicious and Clean. Get order now!
+          </p>
+          <button
+            id="toOrderForm"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded mt-4"
+          >
+            order
+          </button>
+        </div>
+      </section>
+      <section id="about-us" class="flex h-screen bg-cornsilk pt-[180px]">
+        <div class="info-homepage ml-[100px] pt-5">
+          <h2
+            class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5"
+          >
+            About us!
+          </h2>
+          <p class="w-[70%] text-lg text-earthyBrown font-josts mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            dolores corrupti atque ipsa itaque totam incidunt aliquid quia
+            aperiam, temporibus repudiandae. Consectetur, nam alias ut qui vitae
+            non error natus.
+          </p>
+          <button
+            id="orderHome"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded mt-4"
+          >
+            order!
+          </button>
+        </div>
+        <div class="img-homepage">
+          <img
+            src="./image/ricebowl-ayam-geprek.png"
+            alt=""
+            class="w-[80%] mr-[100px]"
+          />
+        </div>
+      </section>
+      <section
+        id="products"
+        class="flex flex-col justify-center item-center h-screen bg-cornsilk"
+      >
+        <h2
+          class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5 text-center"
+        >
+          Our Products!
+        </h2>
+        <div class="container-products flex justify-evenly pt-[30px]">
+          <div
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
+          >
+            <div class="img-card-menu">
+              <img
+                src="./image/ricebowl-ayam-geprek.png"
+                class="w-[180px]"
+                alt=""
+              />
+            </div>
+            <div class="info-card-menu">
+              <h3
+                class="menu-name text-lg font-bold text-center mt-[5px] text-crimson"
+              >
+                Ricebowl Ayam Geprek
+              </h3>
+              <h4
+                class="menu-price text-sm font-normal text-center mt-[8px] text-crimson"
+              >
+                Rp 15.000
+              </h4>
+              <p
+                class="menu-info text-md font-normal text-justify mt-[8px] text-crimson"
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
+          >
+            <div class="img-card-menu">
+              <img
+                src="./image/ricebowl-ayam-geprek.png"
+                class="w-[180px]"
+                alt=""
+              />
+            </div>
+            <div class="info-card-menu">
+              <h3
+                class="menu-name text-lg font-bold text-center mt-[5px] text-crimson"
+              >
+                Ricebowl Ayam Geprek
+              </h3>
+              <h4
+                class="menu-price text-sm font-normal text-center mt-[8px] text-crimson"
+              >
+                Rp 15.000
+              </h4>
+              <p
+                class="menu-info text-md font-normal text-justify mt-[8px] text-crimson"
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
+          >
+            <div class="img-card-menu">
+              <img
+                src="./image/ricebowl-ayam-geprek.png"
+                class="w-[180px]"
+                alt=""
+              />
+            </div>
+            <div class="info-card-menu">
+              <h3
+                class="menu-name text-lg font-bold text-center mt-[5px] text-crimson"
+              >
+                Ricebowl Ayam Geprek
+              </h3>
+              <h4
+                class="menu-price text-sm font-normal text-center mt-[8px] text-crimson"
+              >
+                Rp 15.000
+              </h4>
+              <p
+                class="menu-info text-md font-normal text-justify mt-[8px] text-crimson"
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
+          >
+            <div class="img-card-menu">
+              <img
+                src="./image/ricebowl-ayam-geprek.png"
+                class="w-[180px]"
+                alt=""
+              />
+            </div>
+            <div class="info-card-menu">
+              <h3
+                class="menu-name text-lg font-bold text-center mt-[5px] text-crimson"
+              >
+                Ricebowl Ayam Geprek
+              </h3>
+              <h4
+                class="menu-price text-sm font-normal text-center mt-[8px] text-crimson"
+              >
+                Rp 15.000
+              </h4>
+              <p
+                class="menu-info text-md font-normal text-justify mt-[8px] text-crimson"
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="testimoni"
+        class="flex flex-col justify-center item-center h-screen bg-cornsilk"
+      >
+        <h2
+          class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5 text-center"
+        >
+          Testimoni
+        </h2>
+        <div
+          class="container-testimoni grid grid-cols-2 gap-6 place-items-center"
+        >
+          <div
+            class="card-testimoni flex items-center max-w-[400px] p-[10px] bg-floralWhite rounded"
+          >
+            <div class="img-card-testimoni">
+              <img
+                src="./image/smilling man.jpg"
+                class="w-[220px] h-auto rounded"
+                alt=""
+              />
+            </div>
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal text-left mt-[8px] text-crimson"
+              >
+                "Rasanya enak banget, porsinya pas, dan harganya terjangkau.
+                Ricebowl Ku jadi menu favorit makan siangku!"
+              </h4>
+              <p
+                class="name-testimoni text-md font-normal text-left mt-[8px] text-crimson"
+              >
+                Denis, Mahasiswi
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
+          >
+            <div class="img-card-testimoni">
+              <img
+                src="./image/smilling man.jpg"
+                class="w-[220px] h-auto rounded"
+                alt=""
+              />
+            </div>
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal text-left mt-[8px] text-crimson"
+              >
+                "Rasanya enak banget, porsinya pas, dan harganya terjangkau.
+                Ricebowl Ku jadi menu favorit makan siangku!"
+              </h4>
+              <p
+                class="name-testimoni text-md font-normal text-left mt-[8px] text-crimson"
+              >
+                Denis, Mahasiswi
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
+          >
+            <div class="img-card-testimoni">
+              <img
+                src="./image/smilling man.jpg"
+                class="w-[220px] h-auto rounded"
+                alt=""
+              />
+            </div>
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal text-left mt-[8px] text-crimson"
+              >
+                "Rasanya enak banget, porsinya pas, dan harganya terjangkau.
+                Ricebowl Ku jadi menu favorit makan siangku!"
+              </h4>
+              <p
+                class="name-testimoni text-md font-normal text-left mt-[8px] text-crimson"
+              >
+                Denis, Mahasiswi
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
+          >
+            <div class="img-card-testimoni">
+              <img
+                src="./image/smilling man.jpg"
+                class="w-[220px] h-auto rounded"
+                alt=""
+              />
+            </div>
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal text-left mt-[8px] text-crimson"
+              >
+                "Rasanya enak banget, porsinya pas, dan harganya terjangkau.
+                Ricebowl Ku jadi menu favorit makan siangku!"
+              </h4>
+              <p
+                class="name-testimoni text-md font-normal text-left mt-[8px] text-crimson"
+              >
+                Denis, Mahasiswi
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="flex flex-col justify-center item-center h-screen bg-cornsilk"
+      >
+        <h2
+          class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5 text-center"
+        >
+          Contact
+        </h2>
+        <div class="container-products flex justify-evenly pt-[30px]">
+          <div class="container-contact flex justify-evenly w-[75%]">
+            <div class="contact-element flex flex-col justify-center">
+              <i data-feather="home"></i>
+              <p class="contact-info text-crimson text-sm font-normal">
+                Jalan Jati I, Kota Medan
+              </p>
+            </div>
+            <div class="contact-element flex flex-col justify-center">
+              <i data-feather="phone"></i>
+              <p class="contact-info text-crimson text-sm font-normal">
+                +628-7843-8347
+              </p>
+            </div>
+            <div class="contact-element flex flex-col justify-center">
+              <i data-feather="mail"></i>
+              <p class="contact-info text-crimson text-sm font-normal">
+                info@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="footer-section flex flex-row bg-bisque h-[300px] justify-around font-jost"
+      >
+        <div class="addres">
+          <img src="./image/logo.png" alt="" class="w-[250px] py-3 px-5" />
+          <p class="address-ricebowl text-crimson text-md font-bold">
+            Jalan Jati I, Teladan Barat, Kec. Medan Kota, Kota Medan, Sumatera
+            Utara
+          </p>
+        </div>
+        <div class="social flex flex-col justify-around h-[200px] mt-[50px]">
+          <i data-feather="facebook"><a href="#"></a></i>
+          <i data-feather="instagram"><a href="#"></a></i>
+          <i data-feather="youtube"><a href="#"></a></i>
+        </div>
+        <div class="container-contact flex justify-evenly w-[45%]">
+          <div class="contact-element flex flex-col justify-center">
+            <i data-feather="home"></i>
+            <p class="contact-info text-crimson text-sm font-normal">
+              Jalan Jati I, Kota Medan
+            </p>
+          </div>
+          <div class="contact-element flex flex-col justify-center">
+            <i data-feather="phone"></i>
+            <p class="contact-info text-crimson text-sm font-normal">
+              +628-7843-8347
+            </p>
+          </div>
+          <div class="contact-element flex flex-col justify-center">
+            <i data-feather="mail"></i>
+            <p class="contact-info text-crimson text-sm font-normal">
+              info@gmail.com
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
     <div>
-      <button id="toLoginForm">login</button>
-      <button id="toRegistForm">regist</button>
       <button id="logoutAccount">logout</button>
     </div>
     <script src="./js/homepage.js"></script>
     <script src="./js/toLoginForm.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

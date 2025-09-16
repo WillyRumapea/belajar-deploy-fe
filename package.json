@@ -1,0 +1,23 @@
+{
+  "name": "belajar-deploy-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./public/style/input.css -o ./public/style/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillyRumapea/belajar-deploy-fe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillyRumapea/belajar-deploy-fe/issues"
+  },
+  "homepage": "https://github.com/WillyRumapea/belajar-deploy-fe#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
