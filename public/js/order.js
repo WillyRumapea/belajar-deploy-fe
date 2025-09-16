@@ -28,6 +28,7 @@ const getDataFetch = async () => {
     imgProd.style.height = "100px";
     buttonAddProd.textContent = "tambahkan";
     buttonAddProd.style.backgroundColor = "#de5418";
+    buttonAddOrder.classList.add("p-2", "rounded-lg", "text-white");
     buttonAddProd.setAttribute("data-id", prod.id_makanan);
     cardMenu.classList.add(
       "flex",
@@ -60,6 +61,7 @@ const getDataFetch = async () => {
           detailNameProd.type = "text";
           const detailPriceProd = document.createElement("p");
           const orderedMenu = document.createElement("div");
+          orderedMenu.classList.add("border-2", "border-crimson", "p-2");
           const qtyWrapper = document.createElement("div");
           qtyWrapper.classList.add(
             "flex",
