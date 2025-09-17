@@ -56,8 +56,11 @@ async function initDashboard() {
       info.style.justifyContent = "center";
       info.style.width = "150px";
       info.style.height = "80px";
+      info.style.gap = "3.4px";
       const infoTitle = document.createElement("h3");
+      infoTitle.style.color = "#c24319";
       const infoText = document.createElement("p");
+      infoText.style.color = "#c24319";
 
       infoTitle.textContent = "Users";
       infoText.textContent = amountUsers;
@@ -85,8 +88,20 @@ async function initDashboard() {
       const amountProds = dataProds.length;
 
       const info = document.createElement("div");
+      info.style.border = "1.3px solid #c24319";
+      info.style.padding = "5px";
+      info.style.borderRadius = "8px";
+      info.style.display = "flex";
+      info.style.flexDirection = "column";
+      info.style.alignItems = "center";
+      info.style.justifyContent = "center";
+      info.style.width = "150px";
+      info.style.height = "80px";
+      info.style.gap = "3.4px";
       const infoTitle = document.createElement("h3");
+      infoTitle.style.color = "#c24319";
       const infoText = document.createElement("p");
+      infoText.style.color = "#c24319";
 
       infoTitle.textContent = "Products";
       infoText.textContent = amountProds;
