@@ -51,11 +51,12 @@ ul#navList {
 li {
   background-color: #fffcf5;
   border-radius: 15px;
+  padding: 5px;
 }
 
 a.navLink {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #c24319;
 }
@@ -79,13 +80,26 @@ div.container-dashboard {
   border: 1px solid orange;
 }
 
+h1.title-container-dashboard {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #943a2c;
+}
+
 div#content {
   width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid orange;
+}
+
+h2.dashboard-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c24319;
 }
 
 div.brief-info {
