@@ -57,6 +57,7 @@ async function initDashboard() {
       info.style.width = "150px";
       info.style.height = "80px";
       info.style.gap = "3.4px";
+      info.style.backgroundColor = "#fffceb";
       const infoTitle = document.createElement("h3");
       infoTitle.style.color = "#c24319";
       const infoText = document.createElement("p");
@@ -98,6 +99,7 @@ async function initDashboard() {
       info.style.width = "150px";
       info.style.height = "80px";
       info.style.gap = "3.4px";
+      info.style.backgroundColor = "#fffcf5";
       const infoTitle = document.createElement("h3");
       infoTitle.style.color = "#c24319";
       const infoText = document.createElement("p");
