@@ -7,14 +7,19 @@
 body {
   border: 2px solid;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 section#nav-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 2px solid red;
 }
 
 section#content-section {
+  width: 70%;
   border: 2px solid blue;
 }
