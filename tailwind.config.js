@@ -14,6 +14,7 @@ module.exports = {
         floralWhite: "#fffcf5",
         paleYellow: "#fffceb",
         gilled: "#de5418",
+        lightOrange: "#ffe08c",
       },
       fontWeight: {
         normal: 500,
