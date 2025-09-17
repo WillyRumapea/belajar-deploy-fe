@@ -24,8 +24,19 @@ nav#navAdmin {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   border: 1px solid green;
+}
+
+ul#navList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 section#content-section {
