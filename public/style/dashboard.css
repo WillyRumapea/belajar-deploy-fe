@@ -58,6 +58,11 @@ div.container-dashboard {
   border: 1px solid orange;
 }
 
+div#content {
+  width: 100%;
+  border: 1px solid orange;
+}
+
 div.brief-info {
   width: 70%;
   padding: 10px;
