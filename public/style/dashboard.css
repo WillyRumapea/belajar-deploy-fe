@@ -58,7 +58,7 @@ div.container-dashboard {
   border: 1px solid orange;
 }
 
-div.container-brief-data {
+div.container-data-brief {
   width: 70%;
   padding: 10px;
   display: flex;
