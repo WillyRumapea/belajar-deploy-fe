@@ -104,6 +104,7 @@ h2.dashboard-title {
 
 div.brief-info {
   width: 70%;
+  height: 80%;
   padding: 10px;
   display: flex;
   justify-content: space-around;
