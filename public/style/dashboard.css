@@ -1,0 +1,7 @@
+section#nav-section {
+  border: 2px solid red;
+}
+
+section#content-section {
+  border: 2px solid blue;
+}
