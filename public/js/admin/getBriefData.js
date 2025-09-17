@@ -48,22 +48,7 @@ async function initDashboard() {
 
       const info = document.createElement("div");
       const infoTitle = document.createElement("h3");
-      infoTitle.classList.add(
-        "font-jost",
-        "font-semibold",
-        "font-lg",
-        "text-earthyBrown",
-        "text-center",
-        "text-xl"
-      );
       const infoText = document.createElement("p");
-      infoText.classList.add(
-        "font-jost",
-        "font-semibold",
-        "text-gilled",
-        "text-center",
-        "text-xl"
-      );
 
       infoTitle.textContent = "Users";
       infoText.textContent = amountUsers;
@@ -92,22 +77,7 @@ async function initDashboard() {
 
       const info = document.createElement("div");
       const infoTitle = document.createElement("h3");
-      infoTitle.classList.add(
-        "font-jost",
-        "font-semibold",
-        "font-lg",
-        "text-earthyBrown",
-        "text-center",
-        "text-xl"
-      );
       const infoText = document.createElement("p");
-      infoText.classList.add(
-        "font-jost",
-        "font-semibold",
-        "text-gilled",
-        "text-center",
-        "text-xl"
-      );
 
       infoTitle.textContent = "Products";
       infoText.textContent = amountProds;
