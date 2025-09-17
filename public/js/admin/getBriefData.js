@@ -1,5 +1,5 @@
 async function initDashboard() {
-  const briefInfo = document.querySelector(".brief-info");
+  const briefInfo = document.querySelector(".container-data-brief");
 
   if (!briefInfo) return;
 
