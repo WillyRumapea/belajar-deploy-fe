@@ -18,43 +18,6 @@ const routes = {
 };
 
 async function loadPage(page) {
-  if (page === "dashboard") {
-    document.getElementById("content").innerHTML = `
-      <h2>Dashboard</h2>
-      <div class="brief-info"></div>
-      <button id="logoutDashboardAdmin">logout</button>
-    `;
-
-    const oldScript = document.querySelector(
-      `script[src="../../js/admin/getBriefData.js"]`
-    );
-    if (oldScript) oldScript.remove();
-
-    const script = document.createElement("script");
-    script.src = "../../js/admin/getBriefData.js";
-    script.onload = () => {
-      if (typeof initDashboard === "function") {
-        initDashboard();
-      }
-    };
-    document.body.appendChild(script);
-
-    const oldLogoutScript = document.querySelector(
-      `script[src="../../js/admin/logout.js"]`
-    );
-    if (oldLogoutScript) oldLogoutScript.remove();
-
-    const logoutScript = document.createElement("script");
-    logoutScript.src = "../../js/admin/logout.js";
-    logoutScript.onload = () => {
-      if (typeof initLogout === "function") {
-        initLogout();
-      }
-    };
-    document.body.appendChild(logoutScript);
-    return;
-  }
-
   const route = routes[page];
   if (!route) return;
 
@@ -64,11 +27,21 @@ async function loadPage(page) {
     const html = await response.text();
     document.getElementById("content").innerHTML = html;
 
+    // Hapus script lama kalau ada
     const oldScript = document.querySelector(`script[src="${route.script}"]`);
     if (oldScript) oldScript.remove();
 
+    // Tambah script baru
     const script = document.createElement("script");
     script.src = route.script;
+    script.onload = () => {
+      if (typeof initDashboard === "function" && page === "dashboard") {
+        initDashboard();
+      }
+      if (typeof initLogout === "function" && page === "dashboard") {
+        initLogout();
+      }
+    };
     document.body.appendChild(script);
   } catch (error) {
     console.error("Error loading page:", error);
@@ -83,4 +56,5 @@ document.querySelectorAll(".navLink").forEach((link) => {
   });
 });
 
+// Default load ke dashboard
 loadPage("dashboard");
