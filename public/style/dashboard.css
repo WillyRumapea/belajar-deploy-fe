@@ -41,5 +41,19 @@ ul#navList {
 
 section#content-section {
   width: 70%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid blue;
+}
+
+div.container-dashboard {
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid orange;
 }
