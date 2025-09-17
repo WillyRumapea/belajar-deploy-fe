@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../style/waiting-delivery.css" />
     <title>Penjemputan dan Pengantaran</title>
   </head>
-  <body class="font-jost border-2 bg-crimson">
+  <body class="font-jost border-2 bg-bisque">
     <h1 class="text-center font-bolder">Terimakasih sudah memesan!</h1>
     <h3 id="message-after-order" class="text-center text-lg">
       Apakah pesanan ingin diantar ?
@@ -26,12 +26,32 @@
         tidak
       </button>
     </div>
-    <form action="" id="form-delivery">
-      <div id="address-map">
-        <div id="map"></div>
-        <input type="text" id="address" />
-        <button id="searchAddres">add</button>
-        <button id="checkDistance">cek jarak</button>
+    <form
+      action=""
+      id="form-delivery"
+      class="text-center border-black rounded-lg"
+    >
+      <div
+        id="address-map"
+        class="flex flex-col items-center justify-between gap-3"
+      >
+        <div id="map" class="mx-auto"></div>
+        <div>
+          <label for="" class="text-earthyBrown">Alamat</label>
+          <input type="text" id="address" />
+        </div>
+        <button
+          id="searchAddres"
+          class="w-[80px] h-[40px] bg-crimson text-white rounded"
+        >
+          add
+        </button>
+        <button
+          id="checkDistance"
+          class="w-[80px] h-[40px] bg-crimson text-white rounded ml-4"
+        >
+          cek jarak
+        </button>
       </div>
     </form>
     <script src="../../js/hitung-jarak.js"></script>
