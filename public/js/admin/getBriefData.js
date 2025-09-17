@@ -47,6 +47,15 @@ async function initDashboard() {
       const amountUsers = dataUsers.length;
 
       const info = document.createElement("div");
+      info.style.border = "1.3px solid #c24319";
+      info.style.padding = "5px";
+      info.style.borderRadius = "8px";
+      info.style.display = "flex";
+      info.style.flexDirection = "column";
+      info.style.alignItems = "center";
+      info.style.justifyContent = "center";
+      info.style.width = "150px";
+      info.style.height = "80px";
       const infoTitle = document.createElement("h3");
       const infoText = document.createElement("p");
 
