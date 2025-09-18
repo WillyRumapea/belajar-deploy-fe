@@ -30,7 +30,8 @@
         <td style="border: 1px solid black; padding: 8px;">${item.orders_total_price}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.orders_status}</td>
         <td style="border: 1px solid black; padding: 8px;">
-            <div>
+            <div class
+            ="action-buttons-orders">
                 <button class="update-orders" data-id=${item.orders_id}>update</button>
                 <button class="delete-orders" data-id=${item.orders_id}>hapus</button>
             </div>

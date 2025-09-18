@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  margin-bottom: 1rem;
+  border: 1px solid #8c5a2e;
+}
+
+thead {
+  border: none;
+  background-color: #8c5a2e;
+}
+
+th {
+  color: #fffcf5;
+}
+
+td {
+  border: 1px solid #8c5a2e;
+  height: 18px;
+  padding: 8px;
+}
+
+.action-buttons-orders {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+button.update-orders {
+  background-color: #8c5a2e;
+  color: #fffcf5;
+  padding: 4px;
+  font-family: "Jost", sans-serif;
+  border: 1px solid #fffcf5;
+}
+
+button.hapus-orders {
+  background-color: #a63832;
+  color: #fffcf5;
+  padding: 4px;
+  font-family: "Jost", sans-serif;
+  border: 1px solid #fffcf5;
+}
