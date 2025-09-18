@@ -59,14 +59,16 @@ async function renderAuthUI() {
     );
     const data = await reqSession.json();
     const dataUser = data.user;
+    const dataUsername = dataUser.username;
     console.log(data);
     console.log(dataUser);
+    console.log(dataUsername);
 
     if (data.loggedin) {
       buttonToLogin.classList.add("hidden");
       buttonToRegist.classList.add("hidden");
 
-      displayUsername.textContent = data.username;
+      displayUsername.textContent = dataUsername;
       displayUsername.classList.remove("hidden");
 
       buttonLogout.classList.remove("hidden");
