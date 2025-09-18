@@ -9,5 +9,6 @@ body {
 }
 
 table {
+  margin-bottom: 5rem;
   border: 1px solid blue;
 }
