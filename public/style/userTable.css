@@ -12,3 +12,11 @@ table {
   margin-bottom: 9rem;
   border: 1px solid blue;
 }
+
+tr {
+  background-color: 1px solid #8c5a2e;
+}
+
+th {
+  color: #fffcf5;
+}
