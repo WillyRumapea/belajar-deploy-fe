@@ -75,9 +75,11 @@ div.container-dashboard {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid orange;
 }
 
 h1.title-container-dashboard {
+  margin-bottom: 4rem;
   font-size: 1.9rem;
   font-weight: 700;
   color: #943a2c;
