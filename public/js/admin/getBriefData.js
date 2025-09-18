@@ -77,7 +77,10 @@ async function initDashboard() {
   async function fetchBriefPesanan() {
     try {
       const reqDataPesanan = await fetch(
-        "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan"
+        "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan",
+        {
+          credentials: "include",
+        }
       );
 
       if (!reqDataPesanan.ok) {
