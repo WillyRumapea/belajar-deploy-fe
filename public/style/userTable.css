@@ -39,6 +39,7 @@ button.update-user {
   color: #fffcf5;
   padding: 4px;
   font-family: "Jost", sans-serif;
+  border: 1px solid #fffcf5;
 }
 
 button.hapus-user {
@@ -46,4 +47,5 @@ button.hapus-user {
   color: #fffcf5;
   padding: 4px;
   font-family: "Jost", sans-serif;
+  border: 1px solid #fffcf5;
 }
