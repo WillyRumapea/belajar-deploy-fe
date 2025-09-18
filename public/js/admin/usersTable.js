@@ -29,7 +29,7 @@
           <td>${item.users_password}</td>
           <td>${item.users_role}</td>
           <td>
-              <div>
+              <div class="action-buttons">
                   <button class="update-user" data-id=${item.users_id}>update</button>
                   <button class="hapus-user" data-id=${item.users_id}>hapus</button>
               </div>

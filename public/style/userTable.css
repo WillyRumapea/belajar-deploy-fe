@@ -27,6 +27,12 @@ td {
   padding: 8px;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 button.update-user {
   background-color: #8c5a2e;
   color: #fffcf5;
