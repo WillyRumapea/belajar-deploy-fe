@@ -58,7 +58,9 @@ async function renderAuthUI() {
       { credentials: "include" }
     );
     const data = await reqSession.json();
+    const dataUser = data.user;
     console.log(data);
+    console.log(dataUser);
 
     if (data.loggedin) {
       buttonToLogin.classList.add("hidden");
