@@ -20,6 +20,7 @@ th {
 
 td {
   border: 1px solid #8c5a2e;
+  background-color: #fffcf5;
   height: 18px;
   padding: 8px;
 }
@@ -37,6 +38,7 @@ button.update-user {
   font-family: "Jost", sans-serif;
   font-size: 16px;
   border: 1px solid #fffcf5;
+  border-radius: 15px;
 }
 
 button.hapus-user {
@@ -46,4 +48,5 @@ button.hapus-user {
   font-family: "Jost", sans-serif;
   font-size: 16px;
   border: 1px solid #fffcf5;
+  border-radius: 15px;
 }
