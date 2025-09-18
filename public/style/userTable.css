@@ -22,6 +22,11 @@ th {
   color: #fffcf5;
 }
 
+td {
+  border: 1px solid #8c5a2e;
+  padding: 8px;
+}
+
 button.update-user {
   background-color: #8c5a2e;
   color: #fffcf5;
