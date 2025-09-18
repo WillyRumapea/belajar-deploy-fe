@@ -21,3 +21,15 @@ thead {
 th {
   color: #fffcf5;
 }
+
+button.update-user {
+  background-color: #8c5a2e;
+  color: #fffcf5;
+  padding: 2px;
+}
+
+button.hapus-user {
+  background-color: #a63832;
+  color: #fffcf5;
+  padding: 2px;
+}

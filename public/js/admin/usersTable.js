@@ -24,11 +24,11 @@
       dataUser.forEach((item) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td style="border: 1px solid black; padding: 8px;">${item.users_id}</td>
-          <td style="border: 1px solid black; padding: 8px;">${item.users_name}</td>
-          <td style="border: 1px solid black; padding: 8px;">${item.users_password}</td>
-          <td style="border: 1px solid black; padding: 8px;">${item.users_role}</td>
-          <td style="border: 1px solid black; padding: 8px;">
+          <td>${item.users_id}</td>
+          <td>${item.users_name}</td>
+          <td>${item.users_password}</td>
+          <td>${item.users_role}</td>
+          <td>
               <div>
                   <button class="update-user" data-id=${item.users_id}>update</button>
                   <button class="hapus-user" data-id=${item.users_id}>hapus</button>
