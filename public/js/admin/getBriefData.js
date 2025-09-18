@@ -74,6 +74,48 @@ async function initDashboard() {
     }
   }
 
+  async function fetchBriefPesanan() {
+    try {
+      const reqDataPesanan = await fetch(
+        "https://belajar-deploy-api-production.up.railway.app/daftar-pesanan"
+      );
+
+      if (!reqDataPesanan.ok) {
+        throw new Error(`HTTP error! Status: ${reqDataPesanan.status}`);
+      }
+
+      const dataJsonPesanan = await reqDataPesanan.json();
+      const dataPesanan = dataJsonPesanan.data;
+      const amountPesanan = dataPesanan.length;
+
+      const info = document.createElement("div");
+      info.style.border = "1.3px solid #c24319";
+      info.style.padding = "5px";
+      info.style.borderRadius = "8px";
+      info.style.display = "flex";
+      info.style.flexDirection = "column";
+      info.style.alignItems = "center";
+      info.style.justifyContent = "center";
+      info.style.width = "150px";
+      info.style.height = "80px";
+      info.style.gap = "3.4px";
+      info.style.backgroundColor = "#fffcf5";
+      const infoTitle = document.createElement("h3");
+      infoTitle.style.color = "#c24319";
+      const infoText = document.createElement("p");
+      infoText.style.color = "#c24319";
+
+      infoTitle.textContent = "Pesanan";
+      infoText.textContent = amountPesanan;
+
+      info.appendChild(infoTitle);
+      info.appendChild(infoText);
+      briefInfo.appendChild(info);
+    } catch (err) {
+      console.error("Error fetch data products:", err);
+    }
+  }
+
   async function fetchBriefProds() {
     try {
       const reqDataProds = await fetch(
@@ -118,5 +160,6 @@ async function initDashboard() {
 
   // panggil semua fetch
   fetchBriefUsers();
+  fetchBriefPesanan();
   fetchBriefProds();
 }
