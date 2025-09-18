@@ -61,7 +61,7 @@ a.navLink {
 }
 
 section#content-section {
-  width: 70%;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
