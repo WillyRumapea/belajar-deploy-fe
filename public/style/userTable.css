@@ -10,11 +10,11 @@ body {
 
 table {
   margin-bottom: 9rem;
-  border: 1px solid blue;
+  border: 1px solid #8c5a2e;
 }
 
 tr {
-  background-color: 1px solid #8c5a2e;
+  background-color: #8c5a2e;
 }
 
 th {
