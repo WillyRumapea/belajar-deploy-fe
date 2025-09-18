@@ -25,7 +25,7 @@
         <td style="border: 1px solid black; padding: 8px;">${item.gambar_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">${item.harga_makanan}</td>
         <td style="border: 1px solid black; padding: 8px;">
-            <div class="action-buttons-makanan>
+            <div class="action-buttons-makanan">
                 <button class="update-makanan" data-id=${item.id_makanan}>update</button>
                 <button class="hapus-makanan" data-id=${item.id_makanan}>hapus</button>
             </div>
