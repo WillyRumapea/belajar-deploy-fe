@@ -111,10 +111,12 @@ div.brief-info {
 
 button#logoutDashboardAdmin {
   background-color: #fff5d9;
-  color: #0e0e0e;
+  color: #c24319;
   padding: 4px;
   font-family: "Jost", sans-serif;
   font-size: 16px;
+  width: 140px;
+  height: 50px;
   border: 1px solid #fffcf5;
   border-radius: 15px;
 }
