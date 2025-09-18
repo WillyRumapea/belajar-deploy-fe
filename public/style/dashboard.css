@@ -108,3 +108,13 @@ div.brief-info {
   justify-content: space-around;
   align-items: center;
 }
+
+button#logoutDashboardAdmin {
+  background-color: #fff5d9;
+  color: #0e0e0e;
+  padding: 4px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  border: 1px solid #fffcf5;
+  border-radius: 15px;
+}

@@ -108,7 +108,7 @@ async function initDashboard() {
       const infoText = document.createElement("p");
       infoText.style.color = "#c24319";
 
-      infoTitle.textContent = "Pesanan";
+      infoTitle.textContent = "Orders";
       infoText.textContent = amountPesanan;
 
       info.appendChild(infoTitle);
