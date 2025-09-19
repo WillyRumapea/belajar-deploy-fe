@@ -45,6 +45,7 @@ buttonTidakAntar.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "../../index.html";
   });
+  body.appendChild(buttonExit);
   body.appendChild(tengkuRiceBowl);
 });
 
