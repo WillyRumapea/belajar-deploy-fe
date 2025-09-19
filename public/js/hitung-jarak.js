@@ -25,6 +25,7 @@ buttonAntar.addEventListener("click", (e) => {
 
 buttonTidakAntar.addEventListener("click", (e) => {
   e.preventDefault();
+  const declineDeliv = document.getElementById("declineDeliv");
   h3Message.textContent = "Silahkan jemput pesanan pada alamat tertera";
   deliveryOption.style.display = "none";
   formDelivery.style.display = "none";
@@ -52,8 +53,9 @@ buttonTidakAntar.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "../../index.html";
   });
-  body.appendChild(buttonExit);
-  body.appendChild(tengkuRiceBowl);
+
+  declineDeliv.appendChild(tengkuRiceBowl);
+  declineDeliv.appendChild(buttonExit);
 });
 
 function initMap() {
