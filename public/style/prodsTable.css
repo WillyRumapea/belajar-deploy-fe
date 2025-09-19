@@ -12,6 +12,7 @@ div.headerTable {
   align-items: center;
   gap: 20px;
   width: 80%;
+  border: 1px solid #fff;
 }
 
 button#addProds {
@@ -22,6 +23,7 @@ button#addProds {
   font-size: 16px;
   border: 1px solid #fffcf5;
   border-radius: 15px;
+  padding-left: 50px;
 }
 
 table {
