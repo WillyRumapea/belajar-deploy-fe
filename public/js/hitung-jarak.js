@@ -177,7 +177,7 @@ buttonCheck.addEventListener("click", async (e) => {
     window.location.href = "../../index.html";
   } else {
     alert(
-      `Lokasi berada dalam diluar jangkauan ${distance.toFixed(
+      `Lokasi berada diluar jangkauan ${distance.toFixed(
         2
       )} km. silahkan masukkan alamat lain
       `
