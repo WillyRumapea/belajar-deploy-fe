@@ -56,6 +56,8 @@ buttonTidakAntar.addEventListener("click", (e) => {
 
   declineDeliv.appendChild(tengkuRiceBowl);
   declineDeliv.appendChild(buttonExit);
+
+  body.appendChild(declineDeliv);
 });
 
 function initMap() {
