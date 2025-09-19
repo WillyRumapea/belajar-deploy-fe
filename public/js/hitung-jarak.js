@@ -40,7 +40,14 @@ buttonTidakAntar.addEventListener("click", (e) => {
   );
   const buttonExit = document.createElement("button");
   buttonExit.textContent = "Kembali ke Beranda";
-  buttonExit.classList.add("bg-earthyBrown", "text-white", "p-4", "mt-5");
+  buttonExit.classList.add(
+    "bg-earthyBrown",
+    "text-bisque",
+    "p-4",
+    "mt-5",
+    "text-center",
+    "w-[200px]"
+  );
   buttonExit.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "../../index.html";
