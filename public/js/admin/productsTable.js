@@ -1,5 +1,12 @@
 (() => {
   const formUpdateMakanan = document.getElementById("form-update-makanan");
+  const btnTambahkanMakanan = document.getElementById("addProds");
+
+  btnTambahkanMakanan.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./addProds.html";
+  });
+
   async function fetchProdsData() {
     try {
       const reqDataProds = await fetch(
