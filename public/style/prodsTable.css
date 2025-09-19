@@ -6,11 +6,12 @@
 
 div.headerTable {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
   align-items: center;
   gap: 20px;
   width: 80%;
-  border: 1px solid #fff;
 }
 
 button#addProds {
