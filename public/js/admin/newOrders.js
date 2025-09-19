@@ -1,5 +1,5 @@
 const formNewOrder = document.getElementById("addFormOrders");
-const btnNewOrder = document.getElementById("btnAddNewOrders");
+const btnNewOrder = document.getElementById("btnAddNewOrder");
 
 btnNewOrder.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -7,7 +7,7 @@ btnNewOrder.addEventListener("click", async (e) => {
     const data = {
       orders_id: formNewOrder.orders_id.value,
       orders_customer: formNewOrder.orders_customer.value,
-      orders_menu: formNewOrder.ordersmenu.value,
+      orders_menu: formNewOrder.orders_menu.value,
       orders_amount: formNewOrder.orders_amount.value,
       orders_total_price: formNewOrder.orders_total_price.value,
       orders_status: formNewOrder.orders_status.value,
