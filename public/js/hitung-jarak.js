@@ -168,7 +168,7 @@ buttonCheck.addEventListener("click", async (e) => {
     `Jarak dari posisi1 ke ${setAddressUser} adalah ${distance.toFixed(3)}, km`
   );
 
-  if (distance <= 30) {
+  if (distance <= 15) {
     alert(
       `Lokasi berada dalam jangkauan ${distance.toFixed(
         2
