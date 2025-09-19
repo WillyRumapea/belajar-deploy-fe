@@ -38,7 +38,13 @@ buttonTidakAntar.addEventListener("click", (e) => {
     "underline",
     "mt-4"
   );
-  window.location.href = "../../index.html";
+  const buttonExit = document.createElement("button");
+  buttonExit.textContent = "Kembali ke Beranda";
+  buttonExit.classList.add("bg-earthyBrown", "text-white", "p-4", "mt-5");
+  buttonExit.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "../../index.html";
+  });
   body.appendChild(tengkuRiceBowl);
 });
 
