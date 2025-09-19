@@ -23,6 +23,7 @@ btnNewProd.addEventListener("click", async (e) => {
     );
     if (response.ok) {
       alert("Berhasil menambahkan makanan");
+      window.location.href = "./dashboard.html";
     } else {
       alert("Gagal menambahkan makanan");
     }
