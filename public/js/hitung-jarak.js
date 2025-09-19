@@ -30,7 +30,14 @@ buttonTidakAntar.addEventListener("click", (e) => {
   formDelivery.style.display = "none";
   alert("Silahkan jemput ke alamat tertera");
   const tengkuRiceBowl = document.createElement("p");
-  tengkuRiceBowl.textContent = "Jalan Jati I, Teladan Barat";
+  tengkuRiceBowl.textContent = "Jalan Karya Bakti No.28, Teladan Barat";
+  tengkuRiceBowl.classList.add(
+    "text-center",
+    "text-lg",
+    "text-earthyBrown",
+    "underline",
+    "mt-4"
+  );
   body.appendChild(tengkuRiceBowl);
 });
 
