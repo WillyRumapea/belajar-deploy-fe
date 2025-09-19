@@ -33,11 +33,12 @@ buttonTidakAntar.addEventListener("click", (e) => {
   tengkuRiceBowl.textContent = "Jalan Karya Bakti No.28, Teladan Barat";
   tengkuRiceBowl.classList.add(
     "text-center",
-    "text-lg",
+    "text-2xl",
     "text-earthyBrown",
     "underline",
     "mt-4"
   );
+  window.location.href = "../../index.html";
   body.appendChild(tengkuRiceBowl);
 });
 
