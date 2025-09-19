@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+#headerTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid;
+}
+
+button#addProds {
+  background-color: #8c5a2e;
+  color: #fffcf5;
+  padding: 4px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  border: 1px solid #fffcf5;
+  border-radius: 15px;
+}
+
 table {
   margin-bottom: 1rem;
   border: 1px solid #8c5a2e;
