@@ -1,5 +1,11 @@
 (() => {
   const formUpdateOrder = document.getElementById("form-update-orders");
+  const btnTambahkanOrder = document.getElementById("addOrder");
+
+  btnTambahkanOrder.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./addOrders.html";
+  });
   async function fetchOrdersData() {
     try {
       const reqDataOrders = await fetch(

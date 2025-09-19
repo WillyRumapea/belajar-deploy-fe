@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Form Order</title>
+  </head>
+  <body>
+    <h1>Tambahkan Produk</h1>
+    <form action="" id="addFormOrders">
+      <input type="text" name="orders_id" placeholder="id customer" required />
+      <input
+        type="text"
+        name="orders_customer"
+        placeholder="nama customer"
+        required
+      />
+      <input
+        type="text"
+        name="orders_menu"
+        placeholder="menu pesanan"
+        required
+      />
+      <input
+        type="number"
+        name="orders_amount"
+        placeholder="jumlah pesanan"
+        required
+      />
+      <input
+        type="number"
+        name="orders_total_price"
+        placeholder="total harga pesanan"
+        required
+      />
+      <input
+        type="number"
+        name="orders_status"
+        placeholder="status pesanan"
+        required
+      />
+      <button id="btnAddNewOrder">tambahkan</button>
+    </form>
+    <script src="../../js/admin/newOrder.js"></script>
+  </body>
+</html>
