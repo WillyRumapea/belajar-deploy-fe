@@ -41,14 +41,13 @@ buttonTidakAntar.addEventListener("click", (e) => {
   );
   const buttonExit = document.createElement("button");
   buttonExit.textContent = "Kembali ke Beranda";
-  buttonExit.classList.add(
-    "bg-earthyBrown",
-    "text-bisque",
-    "p-4",
-    "mt-5",
-    "text-center",
-    "w-[200px]"
-  );
+  buttonExit.style.backgroundColor = "#de5418";
+  buttonExit.style.color = "#a63832";
+  buttonExit.style.padding = "10px 20px";
+  buttonExit.style.borderRadius = "15px";
+  buttonExit.style.fontWeight = "600";
+  buttonExit.style.width = "180px";
+  buttonExit.style.height = "40px";
   buttonExit.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "../../index.html";
