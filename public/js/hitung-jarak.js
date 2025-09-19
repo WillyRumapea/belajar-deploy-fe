@@ -40,9 +40,9 @@ buttonTidakAntar.addEventListener("click", (e) => {
     "mt-4"
   );
   const buttonExit = document.createElement("button");
-  buttonExit.textContent = "Kembali ke Beranda";
+  buttonExit.textContent = "homepage";
   buttonExit.style.backgroundColor = "#de5418";
-  buttonExit.style.color = "#a63832";
+  buttonExit.style.color = "#fffcf5";
   buttonExit.style.padding = "10px 20px";
   buttonExit.style.borderRadius = "15px";
   buttonExit.style.fontWeight = "600";
