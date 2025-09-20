@@ -82,7 +82,7 @@ input {
   padding: 5.5px;
 }
 
-btn.btnUpdate {
+button.btnUpdate {
   color: #de5418;
   background-color: #fffcf5;
   font-size: 18px;
