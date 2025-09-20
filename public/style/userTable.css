@@ -50,3 +50,23 @@ button.hapus-user {
   border: 1px solid #fffcf5;
   border-radius: 15px;
 }
+
+form#form-update-user {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  border: 1.5px solid #943a2c;
+  border-radius: 5px;
+  padding: 5.5px;
+}
+
+button.btnUpdate {
+  color: #de5418;
+  background-color: #fffcf5;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #de5418;
+}
