@@ -9,16 +9,16 @@
   </head>
   <body>
     <header
-      class="flex flex-col py-[0.8rem] fixed z-[100] top-0.5 w-full bg-white/30 backdrop-blur-md border-white/20 shadow-lg"
+      class="flex flex-col py-[0.8rem] fixed z-[100] top-0.5 w-full bg-white/30 backdrop-blur-md border-white/20 shadow-md"
     >
-      <nav class="flex flex-row justify-between items-center px-4">
-        <h1 class="text-crimson text-lg sm:text-xl">Culinarybykiki</h1>
-        <ul class="hidden md:flex flex-row w-[45%] justify-evenly items-center">
+      <nav class="flex flex-row justify-around items-center">
+        <h1 class="text-crimson">Culinarybykiki</h1>
+        <ul class="flex flex-row w-[40%] justify-evenly items-center">
           <li>
             <a href="#homepage" class="nav-link text-earthyBrown">Homepage</a>
           </li>
           <li>
-            <a href="#about-us" class="nav-link text-earthyBrown">About Us</a>
+            <a href="#about-us" class="nav-lin text-earthyBrown">About Us</a>
           </li>
           <li>
             <a href="#products" class="nav-link text-earthyBrown">Product</a>
@@ -27,16 +27,16 @@
             <a href="#testimoni" class="nav-link text-earthyBrown">Testimoni</a>
           </li>
         </ul>
-        <div class="hidden md:flex w-[15%] flex-row justify-evenly">
+        <div class="flex flex-row justify-evenly gap-3 pt-2">
           <button
             id="toLoginForm"
-            class="w-[70px] h-[35px] bg-crimson text-white rounded text-sm"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded"
           >
             login
           </button>
           <button
             id="toRegistForm"
-            class="w-[70px] h-[35px] bg-crimson text-white rounded text-sm"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded"
           >
             regist
           </button>
@@ -48,142 +48,87 @@
             logout
           </button>
         </div>
-        <button id="burgerBtn" class="md:hidden text-crimson">
-          <i data-feather="menu"></i>
-        </button>
       </nav>
-      <div
-        id="mobileMenu"
-        class="hidden flex flex-col justify-center items-center w-full bg-white/95 backdrop-blur-md border-t border-earthyBrown shadow-md md:hidden"
-      >
-        <a
-          href="#homepage"
-          class="px-6 py-3 text-earthyBrown hover:bg-bisque border-b"
-          >Homepage</a
-        >
-        <a
-          href="#about-us"
-          class="px-6 py-3 text-earthyBrown hover:bg-bisque border-b"
-          >About Us</a
-        >
-        <a
-          href="#products"
-          class="px-6 py-3 text-earthyBrown hover:bg-bisque border-b"
-          >Product</a
-        >
-        <a
-          href="#testimoni"
-          class="px-6 py-3 text-earthyBrown hover:bg-bisque border-b"
-          >Testimoni</a
-        >
-
-        <div class="flex flex-col items-start px-6 py-4 gap-2">
-          <button
-            id="loginFormMobile"
-            class="w-[120px] h-[40px] bg-crimson text-white rounded"
-          >
-            login
-          </button>
-          <button
-            id="registFormMobile"
-            class="w-[120px] h-[40px] bg-crimson text-white rounded"
-          >
-            register
-          </button>
-        </div>
-      </div>
     </header>
     <main>
-      <section
-        id="homepage"
-        class="flex flex-col md:flex-row h-auto md:h-screen bg-bisque pt-[90px] px-4"
-      >
-        <div class="img-homepage flex justify-center">
+      <section id="homepage" class="flex h-screen bg-bisque pt-[90px]">
+        <div>
           <img
             src="./image/ricebowl-ayam-geprek.png"
             alt=""
-            class="w-[80%] h-[250px] md:h-[400px] object-contain mt-4 md:mt-10"
+            class="w-full h-[400px] object-contain mt-10 pl-[30px]"
             id="img-homepage"
           />
         </div>
         <div
-          class="info-homepage w-full md:w-[50%] pb-[50px] md:pb-[100px] md:ml-[80px] mt-6 md:mt-[140px] font-bold text-center md:text-left"
+          class="info-homepage w-[50%] pb-[100px] ml-[80px] mt-[140px] font-bold"
         >
-          <p class="text-3xl md:text-5xl text-earthyBrown">Culinarybykiki</p>
-          <p
-            class="text-lg md:text-3xl text-earthyBrown leading-7 md:leading-10"
-          >
+          <p class="text-5xl text-earthyBrown mb-3 font-jost">Culinarybykiki</p>
+          <p class="text-3xl text-earthyBrown leading-10 font-jost">
             Simple, Delicious and Clean. Get order now!
           </p>
           <button
             id="toOrderForm"
-            class="w-[100px] h-[40px] bg-crimson text-white rounded mt-4"
+            class="w-[80px] h-[40px] bg-crimson text-white rounded mt-4 font-jost"
           >
             order
           </button>
         </div>
       </section>
-      <section
-        id="about-us"
-        class="flex flex-col md:flex-row h-auto md:h-screen bg-cornsilk pt-[100px] md:pt-[180px] px-4"
-      >
-        <div class="info-homepage md:ml-[100px] pt-5 text-center md:text-left">
+      <section id="about-us" class="flex h-screen bg-cornsilk pt-[180px]">
+        <div class="info-homepage ml-[100px] pt-5">
           <h2
             class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5"
           >
             About us!
           </h2>
-          <p class="w-full md:w-[70%] text-sm md:text-lg text-earthyBrown mb-5">
+          <p class="w-[70%] text-lg text-earthyBrown font-jost mb-5">
             CullinaryByKiki hadir dengan ricebowl lezat dan praktis yang siap
             nemenin harimu. Kami selalu pakai bahan segar dan racikan khas biar
             tiap suapan penuh rasa. Simple, enak, dan bikin kenyang tanpa ribet!
           </p>
         </div>
-        <div
-          class="img-homepage flex justify-center md:justify-end mt-6 md:mt-0"
-        >
+        <div class="img-homepage w-1/2">
           <img
             src="./image/logo.png"
             alt=""
-            class="w-[120%] mr-[10px] mt-[10px] md:w-[80%] md:mr-[100px]"
+            class="w-[120%] mr-[10px] mt-[10px]"
           />
         </div>
       </section>
       <section
         id="products"
-        class="flex flex-col justify-center h-auto md:h-screen bg-cornsilk px-4"
+        class="flex flex-col justify-center item-center h-screen bg-cornsilk"
       >
         <h2
-          class="font-jost text-2xl md:text-4xl text-earthyBrown font-bold mb-5 text-center"
+          class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5 text-center"
         >
           Our Products!
         </h2>
-        <div
-          class="container-products grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center"
-        >
+        <div class="container-products flex justify-evenly pt-[30px]">
           <div
-            class="card-menu w-full max-w-[180px] p-3 bg-floralWhite rounded-lg"
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
           >
-            <div class="img-card-menu flex justify-center">
+            <div class="img-card-menu">
               <img
                 src="./image/ricebowl-ayam-geprek.png"
-                class="w-[140px] md:w-[180px]"
+                class="w-[140px]"
                 alt=""
               />
             </div>
             <div class="info-card-menu">
               <h3
-                class="menu-name text-sm md:text-lg font-bold text-center mt-2 text-crimson"
+                class="menu-name text-lg font-bold font-jost text-center mt-[5px] text-crimson"
               >
                 Ricebowl Ayam Geprek
               </h3>
               <h4
-                class="menu-price text-xs md:text-sm text-center mt-2 text-crimson"
+                class="menu-price text-sm font-normal font-jost text-center mt-[8px] text-crimson"
               >
                 Rp 15.000
               </h4>
               <p
-                class="menu-info text-xs md:text-md text-justify mt-2 text-crimson"
+                class="menu-info text-md font-normal font-jost text-justify mt-[8px] text-crimson"
               >
                 Ayam crispy digeprek dengan sambal pedas nikmat, bikin keringat
                 deras tapi puas.
@@ -191,28 +136,28 @@
             </div>
           </div>
           <div
-            class="card-menu w-full max-w-[180px] p-3 bg-floralWhite rounded-lg"
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
           >
             <div class="img-card-menu">
               <img
                 src="./image/ricebowl ayam goreng madu.png"
-                class="w-[140px] md:w-[180px]"
+                class="w-[180px]"
                 alt=""
               />
             </div>
             <div class="info-card-menu">
               <h3
-                class="menu-name text-sm md:text-lg font-bold text-center mt-2 text-crimson"
+                class="menu-name text-lg font-bold font-jost text-center mt-[5px] text-crimson"
               >
                 Ricebowl Ayam Goreng Madu
               </h3>
               <h4
-                class="menu-price text-xs md:text-sm text-center mt-2 text-crimson"
+                class="menu-price text-sm font-normal font-jost text-center mt-[8px] text-crimson"
               >
                 Rp 15.000
               </h4>
               <p
-                class="menu-info text-xs md:text-md text-justify mt-2 text-crimson"
+                class="menu-info text-md font-normal font-jost text-justify mt-[8px] text-crimson"
               >
                 Ayam goreng renyah berpadu manis gurih saus madu yang bikin
                 nagih
@@ -220,28 +165,28 @@
             </div>
           </div>
           <div
-            class="card-menu w-full max-w-[180px] p-3 bg-floralWhite rounded-lg"
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
           >
-            <div class="img-card-menu flex justify-center">
+            <div class="img-card-menu h-[35%]">
               <img
                 src="./image/ricebowl ayam sambal mata.png"
-                class="w-[140px] md:w-[180px]"
+                class="w-[180px]"
                 alt=""
               />
             </div>
             <div class="info-card-menu">
               <h3
-                class="menu-name text-sm md:text-lg font-bold text-center mt-2 text-crimson"
+                class="menu-name text-lg font-bold font-jost text-center mt-[5px] text-crimson"
               >
                 Ricebowl Ayam Sambal Matah
               </h3>
               <h4
-                class="menu-price text-xs md:text-sm text-center mt-2 text-crimson"
+                class="menu-price text-sm font-normal font-jost text-center mt-[8px] text-crimson"
               >
                 Rp 17.000
               </h4>
               <p
-                class="menu-info text-xs md:text-md text-justify mt-2 text-crimson"
+                class="menu-info text-md font-normal font-jost text-justify mt-[8px] text-crimson"
               >
                 Ayam goreng hangat disiram sambal matah segar pedas yang harum
                 menggoda.
@@ -249,28 +194,28 @@
             </div>
           </div>
           <div
-            class="card-menu w-full max-w-[180px] p-3 bg-floralWhite rounded-lg"
+            class="card-menu max-w-[200px] p-[10px] bg-floralWhite rounded-lg"
           >
-            <div class="img-card-menu flex justify-center">
+            <div class="img-card-menu">
               <img
                 src="./image/ricebowl ayam black pepper.png"
-                class="w-[140px] md:w-[180px]"
+                class="w-[180px]"
                 alt=""
               />
             </div>
             <div class="info-card-menu">
               <h3
-                class="menu-name text-sm md:text-lg font-bold text-center mt-2 text-crimson"
+                class="menu-name text-lg font-bold font-jost text-center mt-[5px] text-crimson"
               >
                 Ricebowl Ayam Black Pepper
               </h3>
               <h4
-                class="menu-price text-xs md:text-sm text-center mt-2 text-crimson"
+                class="menu-price text-sm font-normal font-jost text-center mt-[8px] text-crimson"
               >
                 Rp 19.000
               </h4>
               <p
-                class="menu-info text-xs md:text-md text-justify mt-2 text-crimson"
+                class="menu-info text-md font-normal font-jost text-justify mt-[8px] text-crimson"
               >
                 Potongan ayam empuk dengan saus lada hitam pekat, gurih pedas
                 mantap.
@@ -281,76 +226,84 @@
       </section>
       <section
         id="testimoni"
-        class="flex flex-col justify-center h-auto md:h-screen bg-cornsilk px-4"
+        class="flex flex-col justify-center item-center h-screen bg-cornsilk"
       >
         <h2
-          class="font-jost text-2xl md:text-4xl text-earthyBrown font-bold mb-5 text-center"
+          class="font-jost text-4xl font-600 text-earthyBrown font-bolder mb-5 text-center"
         >
           Testimoni
         </h2>
         <div
-          class="container-testimoni grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center"
+          class="container-testimoni grid grid-cols-2 gap-6 place-items-center"
         >
           <div
-            class="card-testimoni flex flex-col md:flex-row items-center max-w-[400px] p-3 bg-floralWhite rounded"
+            class="card-testimoni flex items-center max-w-[400px] p-[10px] bg-floralWhite rounded"
           >
-            <div
-              class="info-card-testimoni md:ml-[10px] mt-2 md:mt-0 text-center md:text-left"
-            >
-              <h4 class="qoute-testimoni text-xs md:text-sm text-crimson">
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 "Rasanya enak banget, porsinya pas, dan bumbunya meresap
                 sempurna. Cocok banget buat makan siang praktis tapi tetap
                 kenyang!”"
               </h4>
-              <p class="name-testimoni text-sm md:text-md text-crimson mt-2">
+              <p
+                class="name-testimoni text-md font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 Rina Sari, Karyawan Kantoran
               </p>
             </div>
           </div>
           <div
-            class="card-testimoni flex flex-col md:flex-row items-center max-w-[400px] p-3 bg-floralWhite rounded"
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
           >
-            <div
-              class="info-card-testimoni md:ml-[10px] mt-2 md:mt-0 text-center md:text-left"
-            >
-              <h4 class="qoute-testimoni text-xs md:text-sm text-crimson">
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 "Ricebowlnya fresh, toppingnya melimpah, dan harganya
                 terjangkau. Sangat recommended buat yang suka makanan simpel
                 tapi bikin nagih....”"
               </h4>
-              <p class="name-testimoni text-sm md:text-md text-crimson mt-2">
+              <p
+                class="name-testimoni text-md font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 Budi Santoso, Mahasiswa
               </p>
             </div>
           </div>
           <div
-            class="card-testimoni flex flex-col md:flex-row items-center max-w-[400px] p-3 bg-floralWhite rounded"
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
           >
-            <div
-              class="info-card-testimoni md:ml-[10px] mt-2 md:mt-0 text-center md:text-left"
-            >
-              <h4 class="qoute-testimoni text-xs md:text-sm text-crimson">
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 “Sebagai ibu rumah tangga, saya senang sekali bisa pesan
                 ricebowl ini . Praktis, higienis, dan anak-anak juga suka. Jadi
                 solusi cepat untuk makan keluarga.”
               </h4>
-              <p class="name-testimoni text-sm md:text-md text-crimson mt-2">
+              <p
+                class="name-testimoni text-md font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 Maya Putri, Ibu Rumah Tangga
               </p>
             </div>
           </div>
           <div
-            class="card-testimoni flex flex-col md:flex-row items-center max-w-[400px] p-3 bg-floralWhite rounded"
+            class="card-testimoni flex items-start max-w-[400px] p-[10px] bg-floralWhite rounded"
           >
-            <div
-              class="info-card-testimoni md:ml-[10px] mt-2 md:mt-0 text-center md:text-left"
-            >
-              <h4 class="qoute-testimoni text-xs md:text-sm text-crimson">
+            <div class="info-card-testimoni ml-[10px]">
+              <h4
+                class="qoute-testimoni text-sm font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 “Presentasinya menarik, cita rasanya khas, dan kualitasnya
                 konsisten. Ricebowl ini benar-benar bisa bersaing dengan brand
                 besar.”
               </h4>
-              <p class="name-testimoni text-sm md:text-md text-crimson mt-2">
+              <p
+                class="name-testimoni text-md font-normal font-jost text-left mt-[8px] text-crimson"
+              >
                 Andi Wijaya, Food Blogger
               </p>
             </div>
@@ -359,48 +312,39 @@
       </section>
 
       <footer
-        class="footer-section flex flex-col md:flex-row bg-bisque h-auto md:h-[300px] justify-around px-4 py-6"
+        class="footer-section flex flex-row justify-center items-center bg-bisque h-[300px] font-jost gap-5 px-[15px]"
       >
-        <div class="addres text-center md:text-left mb-6 md:mb-0">
-          <img
-            src="./image/logo.png"
-            alt=""
-            class="w-[200px] md:w-[250px] mx-auto md:mx-0"
-          />
-          <h3 class="address-ricebowl text-sm md:text-base">Culinarybykiki</h3>
-        </div>
         <div
-          class="container-contact flex flex-col md:flex-row justify-evenly w-full md:w-[45%] gap-6"
+          class="addres w-[35%] flex flex-col justify-center items-centerborder-2"
         >
-          <div
-            class="contact-element flex flex-col items-center md:items-start"
-          >
+          <img src="./image/logo.png" alt="" class="w-[250px] py-3 px-5" />
+          <p class="address-ricebowl text-crimson text-md font-jost font-bold">
+            Jalan Jati I, Teladan Barat, Kec. Medan Kota, Kota Medan, Sumatera
+            Utara
+          </p>
+        </div>
+        <div class="container-contact flex justify-center gap-2 w-[65%]">
+          <div class="contact-element flex flex-col justify-center">
             <i data-feather="home"></i>
-            <p class="contact-info text-crimson text-sm font-normal">
-              Jalan Karya Bakti No. 28, Kota Medan
+            <p class="contact-info text-crimson text-sm font-jost font-normal">
+              Jalan Jati I, Kota Medan
             </p>
           </div>
-          <div
-            class="contact-element flex flex-col items-center md:items-start"
-          >
+          <div class="contact-element flex flex-col justify-center">
             <i data-feather="phone"></i>
-            <p class="contact-info text-crimson text-sm font-normal">
+            <p class="contact-info text-crimson font-jost text-sm font-normal">
               +62 895-2929-0447
             </p>
           </div>
-          <div
-            class="contact-element flex flex-col items-center md:items-start"
-          >
+          <div class="contact-element flex flex-col justify-center">
             <i data-feather="instagram"></i>
-            <p class="contact-info text-crimson text-sm font-normal">
+            <p class="contact-info text-crimson font-jost text-sm font-normal">
               @culinarybykiki
             </p>
           </div>
-          <div
-            class="contact-element flex flex-col items-center md:items-start"
-          >
+          <div class="contact-element flex flex-col justify-center">
             <i data-feather="mail"></i>
-            <p class="contact-info text-crimson text-sm font-normal">
+            <p class="contact-info text-crimson text-sm font-jost font-normal">
               tengkudeswita@gmail.com
             </p>
           </div>
