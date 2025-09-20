@@ -71,6 +71,20 @@ button.hapus-makanan {
   border-radius: 15px;
 }
 
+div#wrappperFormUpdateProds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h2.titleFormUpdate {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 form#form-update-makanan {
   display: flex;
   gap: 10px;
